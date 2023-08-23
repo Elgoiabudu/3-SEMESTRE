@@ -15,6 +15,7 @@
 
     Private Sub FrmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConectarBanco()
+        CarregarDados()
     End Sub
 
     Private Sub BtnGravar_Click(sender As Object, e As EventArgs) Handles BtnGravar.Click
@@ -30,6 +31,7 @@
                 TxtNome.Clear()
                 ImgFoto.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\bin\Debug\", "\Fotos\NovaFoto.png"))
                 TxtCPF.Focus()
+                CarregarDados()
             Else
                 MsgBox("ERRO | CPF já cadastrado!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
             End If

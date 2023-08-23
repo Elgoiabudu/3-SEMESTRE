@@ -12,7 +12,8 @@
 
             With FrmClientes.dgv_dados
 
-                cont = 0
+                cont = 1
+                .Rows.Clear()
 
                 Do While rs.EOF = False
                     .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(2).Value, Nothing, Nothing)
