@@ -2,6 +2,30 @@
     Public diretorio, SQL As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
+    Public cont As Integer
+
+
+    Sub CarregarDados()
+        Try
+            SQL = "Select * from tb_usuario order by nome asc"
+            rs = db.Execute(SQL)
+
+            With FrmClientes.dgv_dados
+
+                cont = 0
+
+                Do While rs.EOF = False
+                    .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(2).Value, Nothing, Nothing)
+                    rs.MoveNext()
+                    cont += 1
+                Loop
+
+            End With
+        Catch ex As Exception
+            Exit Sub
+        End Try
+    End Sub
+
 
     Sub ConectarBanco()
         Try
