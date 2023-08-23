@@ -36,13 +36,13 @@ Partial Class FrmClientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtCPF = New System.Windows.Forms.MaskedTextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dvg_dados = New System.Windows.Forms.DataGridView()
         CType(Me.ImgFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dvg_dados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImgFoto
@@ -160,7 +160,7 @@ Partial Class FrmClientes
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.dvg_dados)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -169,13 +169,13 @@ Partial Class FrmClientes
         Me.TabPage2.Text = "Listagem geral"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dvg_dados
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 17)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(683, 305)
-        Me.DataGridView1.TabIndex = 0
+        Me.dvg_dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dvg_dados.Location = New System.Drawing.Point(20, 17)
+        Me.dvg_dados.Name = "dvg_dados"
+        Me.dvg_dados.Size = New System.Drawing.Size(683, 305)
+        Me.dvg_dados.TabIndex = 0
         '
         'FrmClientes
         '
@@ -194,7 +194,7 @@ Partial Class FrmClientes
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dvg_dados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -213,5 +213,5 @@ Partial Class FrmClientes
     Friend WithEvents TxtNome As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtCPF As MaskedTextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dvg_dados As DataGridView
 End Class
