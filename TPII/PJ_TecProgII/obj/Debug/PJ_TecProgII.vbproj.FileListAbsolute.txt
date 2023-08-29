@@ -17,7 +17,6 @@ C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\bin\Debug\PJ_TecProgII
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\bin\Debug\PJ_TecProgII.exe
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\bin\Debug\PJ_TecProgII.pdb
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\bin\Debug\PJ_TecProgII.xml
-C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII.vbprojAssemblyReference.cache
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\Interop.ADODB.dll
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII.vbproj.ResolveComReference.cache
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII.Form1.resources
@@ -28,3 +27,4 @@ C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII.exe
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII.xml
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII.pdb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\PJ_TecProgII\obj\Debug\PJ_TecProgII.vbproj.AssemblyReference.cache

@@ -1,8 +1,27 @@
 ﻿Module Modulo
-    Public diretorio, SQL As String
+    Public diretorio, SQL, aux_cpf, resp As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
     Public cont As Integer
+
+    Sub CarregarTipo()
+
+        Try
+
+            With FrmClientes.cmb_tipo.Items
+                .Add("CPF")
+                .Add("Nome")
+            End With
+
+            FrmClientes.cmb_tipo.SelectedIndex = 0 'Garante que o tipo carregará o item CPF definido no Add, ou a sua escolha
+
+        Catch ex As Exception 'Caso ocorra erro ao carregar.
+
+            MsgBox("Erro ao carregar.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Atenção!")
+
+        End Try
+
+    End Sub
 
 
     Sub CarregarDados()
@@ -26,7 +45,6 @@
             Exit Sub
         End Try
     End Sub
-
 
     Sub ConectarBanco()
         Try
