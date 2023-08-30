@@ -3,6 +3,7 @@
         Try
             With OpenFileDialog1
                 .Title = "Selecione uma foto"
+                '.InitialDirectory = Application.StartupPath & "\Fotos\"
                 .InitialDirectory = AppDomain.CurrentDomain.BaseDirectory.Replace("\bin\Debug\", "\Fotos\")
                 .ShowDialog()
                 diretorio = .FileName
@@ -72,7 +73,7 @@
                 Loop
             End With
         Catch ex As Exception
-            MsgBox("ERRO na Consulta !", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+            MsgBox("Usuário não encontrado!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try
     End Sub
 
@@ -105,6 +106,7 @@
                             rs = db.Execute(SQL)
                             TxtCPF.Clear()
                             TxtNome.Clear()
+                            ImgFoto.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\bin\Debug\", "\Fotos\NovaFoto.png"))
                             CarregarDados()
                         End If
                     End If
