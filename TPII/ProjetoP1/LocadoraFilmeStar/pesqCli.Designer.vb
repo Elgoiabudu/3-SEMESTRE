@@ -48,12 +48,24 @@ Partial Class pesqCli
         txtSobrenome = New TextBox()
         Label1 = New Label()
         txtNome = New TextBox()
-        DataGridView1 = New DataGridView()
+        dgvCli = New DataGridView()
+        ID = New DataGridViewTextBoxColumn()
+        NOME = New DataGridViewTextBoxColumn()
+        SOBRENOME = New DataGridViewTextBoxColumn()
+        EMAIL = New DataGridViewTextBoxColumn()
+        CPF = New DataGridViewTextBoxColumn()
+        RG = New DataGridViewTextBoxColumn()
+        CELULAR = New DataGridViewTextBoxColumn()
+        TELEFONE = New DataGridViewTextBoxColumn()
+        ENDERECO = New DataGridViewTextBoxColumn()
+        CIDADE = New DataGridViewTextBoxColumn()
+        ESTADO = New DataGridViewTextBoxColumn()
+        CEP = New DataGridViewTextBoxColumn()
         btnSalvar = New Button()
         btnEditar = New Button()
         btnExcluir = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvCli, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label12
@@ -281,14 +293,77 @@ Partial Class pesqCli
         txtNome.Size = New Size(144, 23)
         txtNome.TabIndex = 32
         ' 
-        ' DataGridView1
+        ' dgvCli
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(11, 163)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(1310, 409)
-        DataGridView1.TabIndex = 57
+        dgvCli.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvCli.Columns.AddRange(New DataGridViewColumn() {ID, NOME, SOBRENOME, EMAIL, CPF, RG, CELULAR, TELEFONE, ENDERECO, CIDADE, ESTADO, CEP})
+        dgvCli.Location = New Point(11, 163)
+        dgvCli.Name = "dgvCli"
+        dgvCli.RowTemplate.Height = 25
+        dgvCli.Size = New Size(1310, 409)
+        dgvCli.TabIndex = 57
+        ' 
+        ' ID
+        ' 
+        ID.HeaderText = "ID"
+        ID.Name = "ID"
+        ID.ReadOnly = True
+        ' 
+        ' NOME
+        ' 
+        NOME.HeaderText = "NOME"
+        NOME.Name = "NOME"
+        NOME.ReadOnly = True
+        ' 
+        ' SOBRENOME
+        ' 
+        SOBRENOME.HeaderText = "SOBRENOME"
+        SOBRENOME.Name = "SOBRENOME"
+        ' 
+        ' EMAIL
+        ' 
+        EMAIL.HeaderText = "EMAIL"
+        EMAIL.Name = "EMAIL"
+        ' 
+        ' CPF
+        ' 
+        CPF.HeaderText = "CPF"
+        CPF.Name = "CPF"
+        ' 
+        ' RG
+        ' 
+        RG.HeaderText = "RG"
+        RG.Name = "RG"
+        ' 
+        ' CELULAR
+        ' 
+        CELULAR.HeaderText = "CELULAR"
+        CELULAR.Name = "CELULAR"
+        ' 
+        ' TELEFONE
+        ' 
+        TELEFONE.HeaderText = "TELEFONE"
+        TELEFONE.Name = "TELEFONE"
+        ' 
+        ' ENDERECO
+        ' 
+        ENDERECO.HeaderText = "ENDERECO"
+        ENDERECO.Name = "ENDERECO"
+        ' 
+        ' CIDADE
+        ' 
+        CIDADE.HeaderText = "CIDADE"
+        CIDADE.Name = "CIDADE"
+        ' 
+        ' ESTADO
+        ' 
+        ESTADO.HeaderText = "ESTADO"
+        ESTADO.Name = "ESTADO"
+        ' 
+        ' CEP
+        ' 
+        CEP.HeaderText = "CEP"
+        CEP.Name = "CEP"
         ' 
         ' btnSalvar
         ' 
@@ -331,7 +406,7 @@ Partial Class pesqCli
         Controls.Add(btnExcluir)
         Controls.Add(btnEditar)
         Controls.Add(btnSalvar)
-        Controls.Add(DataGridView1)
+        Controls.Add(dgvCli)
         Controls.Add(Label12)
         Controls.Add(txtCEP)
         Controls.Add(Label11)
@@ -361,7 +436,7 @@ Partial Class pesqCli
         Name = "pesqCli"
         Text = "CONSULTA DE CLIENTES"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvCli, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -391,8 +466,20 @@ Partial Class pesqCli
     Friend WithEvents txtSobrenome As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtNome As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvCli As DataGridView
     Friend WithEvents btnSalvar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnExcluir As Button
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents NOME As DataGridViewTextBoxColumn
+    Friend WithEvents SOBRENOME As DataGridViewTextBoxColumn
+    Friend WithEvents EMAIL As DataGridViewTextBoxColumn
+    Friend WithEvents CPF As DataGridViewTextBoxColumn
+    Friend WithEvents RG As DataGridViewTextBoxColumn
+    Friend WithEvents CELULAR As DataGridViewTextBoxColumn
+    Friend WithEvents TELEFONE As DataGridViewTextBoxColumn
+    Friend WithEvents ENDERECO As DataGridViewTextBoxColumn
+    Friend WithEvents CIDADE As DataGridViewTextBoxColumn
+    Friend WithEvents ESTADO As DataGridViewTextBoxColumn
+    Friend WithEvents CEP As DataGridViewTextBoxColumn
 End Class
