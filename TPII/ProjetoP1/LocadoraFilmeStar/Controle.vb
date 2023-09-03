@@ -29,7 +29,7 @@
 
     Sub PopularDgvClientes()
         Try
-            SQL = SQL = "SELECT * FROM tbClientes order by nome"
+            SQL = "SELECT * FROM tbClientes order by nome"
             rs = db.Execute(SQL)
 
             With pesqCli.dgvCli
@@ -37,7 +37,9 @@
                 .Rows.Clear()
 
                 Do While rs.EOF = False
-                    .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(2).Value, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing)
+                    .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value,
+                              rs.Fields(6).Value, rs.Fields(7).Value, rs.Fields(8).Value, rs.Fields(9).Value, rs.Fields(10).Value,
+                              rs.Fields(11).Value, Nothing)
                     rs.MoveNext()
                     cont += 1
                 Loop

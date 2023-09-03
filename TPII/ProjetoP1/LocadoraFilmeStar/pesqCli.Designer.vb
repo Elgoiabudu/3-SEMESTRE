@@ -61,9 +61,10 @@ Partial Class pesqCli
         CIDADE = New DataGridViewTextBoxColumn()
         ESTADO = New DataGridViewTextBoxColumn()
         CEP = New DataGridViewTextBoxColumn()
+        AÇÕES = New DataGridViewTextBoxColumn()
         btnSalvar = New Button()
-        btnEditar = New Button()
-        btnExcluir = New Button()
+        Label13 = New Label()
+        TextBox1 = New TextBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvCli, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -295,12 +296,18 @@ Partial Class pesqCli
         ' 
         ' dgvCli
         ' 
+        dgvCli.AllowUserToAddRows = False
+        dgvCli.AllowUserToDeleteRows = False
+        dgvCli.AllowUserToOrderColumns = True
+        dgvCli.AllowUserToResizeColumns = False
+        dgvCli.AllowUserToResizeRows = False
+        dgvCli.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvCli.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCli.Columns.AddRange(New DataGridViewColumn() {ID, NOME, SOBRENOME, EMAIL, CPF, RG, CELULAR, TELEFONE, ENDERECO, CIDADE, ESTADO, CEP})
-        dgvCli.Location = New Point(11, 163)
+        dgvCli.Columns.AddRange(New DataGridViewColumn() {ID, NOME, SOBRENOME, EMAIL, CPF, RG, CELULAR, TELEFONE, ENDERECO, CIDADE, ESTADO, CEP, AÇÕES})
+        dgvCli.Location = New Point(11, 173)
         dgvCli.Name = "dgvCli"
         dgvCli.RowTemplate.Height = 25
-        dgvCli.Size = New Size(1310, 409)
+        dgvCli.Size = New Size(1310, 399)
         dgvCli.TabIndex = 57
         ' 
         ' ID
@@ -365,46 +372,46 @@ Partial Class pesqCli
         CEP.HeaderText = "CEP"
         CEP.Name = "CEP"
         ' 
+        ' AÇÕES
+        ' 
+        AÇÕES.HeaderText = "AÇÕES"
+        AÇÕES.Name = "AÇÕES"
+        ' 
         ' btnSalvar
         ' 
         btnSalvar.BackgroundImage = CType(resources.GetObject("btnSalvar.BackgroundImage"), Image)
         btnSalvar.BackgroundImageLayout = ImageLayout.None
-        btnSalvar.Location = New Point(1121, 100)
+        btnSalvar.Location = New Point(1167, 97)
         btnSalvar.Name = "btnSalvar"
         btnSalvar.Size = New Size(40, 41)
         btnSalvar.TabIndex = 58
         btnSalvar.TextAlign = ContentAlignment.MiddleRight
         btnSalvar.UseVisualStyleBackColor = True
         ' 
-        ' btnEditar
+        ' Label13
         ' 
-        btnEditar.BackgroundImage = CType(resources.GetObject("btnEditar.BackgroundImage"), Image)
-        btnEditar.BackgroundImageLayout = ImageLayout.None
-        btnEditar.Location = New Point(1075, 100)
-        btnEditar.Name = "btnEditar"
-        btnEditar.Size = New Size(40, 41)
-        btnEditar.TabIndex = 59
-        btnEditar.TextAlign = ContentAlignment.MiddleRight
-        btnEditar.UseVisualStyleBackColor = True
+        Label13.AutoSize = True
+        Label13.Location = New Point(10, 147)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(196, 15)
+        Label13.TabIndex = 60
+        Label13.Text = "DIGITE UM NOME PARA PESQUISAR"
         ' 
-        ' btnExcluir
+        ' TextBox1
         ' 
-        btnExcluir.BackgroundImage = CType(resources.GetObject("btnExcluir.BackgroundImage"), Image)
-        btnExcluir.BackgroundImageLayout = ImageLayout.None
-        btnExcluir.Location = New Point(1167, 100)
-        btnExcluir.Name = "btnExcluir"
-        btnExcluir.Size = New Size(40, 41)
-        btnExcluir.TabIndex = 60
-        btnExcluir.TextAlign = ContentAlignment.MiddleRight
-        btnExcluir.UseVisualStyleBackColor = True
+        TextBox1.BackColor = Color.White
+        TextBox1.Location = New Point(212, 144)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(396, 23)
+        TextBox1.TabIndex = 59
         ' 
         ' pesqCli
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1333, 584)
-        Controls.Add(btnExcluir)
-        Controls.Add(btnEditar)
+        Controls.Add(Label13)
+        Controls.Add(TextBox1)
         Controls.Add(btnSalvar)
         Controls.Add(dgvCli)
         Controls.Add(Label12)
@@ -433,6 +440,7 @@ Partial Class pesqCli
         Controls.Add(Label1)
         Controls.Add(txtNome)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        MaximizeBox = False
         Name = "pesqCli"
         Text = "CONSULTA DE CLIENTES"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -468,8 +476,6 @@ Partial Class pesqCli
     Friend WithEvents txtNome As TextBox
     Friend WithEvents dgvCli As DataGridView
     Friend WithEvents btnSalvar As Button
-    Friend WithEvents btnEditar As Button
-    Friend WithEvents btnExcluir As Button
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents NOME As DataGridViewTextBoxColumn
     Friend WithEvents SOBRENOME As DataGridViewTextBoxColumn
@@ -482,4 +488,7 @@ Partial Class pesqCli
     Friend WithEvents CIDADE As DataGridViewTextBoxColumn
     Friend WithEvents ESTADO As DataGridViewTextBoxColumn
     Friend WithEvents CEP As DataGridViewTextBoxColumn
+    Friend WithEvents AÇÕES As DataGridViewTextBoxColumn
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class
