@@ -14,4 +14,12 @@
             MsgBox("ERRO | Erro no formulário de Cadastro de Fornecedores.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ERRO")
         End Try
     End Sub
+
+    Private Sub CategoriasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriasToolStripMenuItem.Click
+        Try
+            cadCateg.ShowDialog()
+        Catch ex As Exception
+            MsgBox("ERRO | Erro no formulário de Cadastro de Categorias.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ERRO")
+        End Try
+    End Sub
 End Class

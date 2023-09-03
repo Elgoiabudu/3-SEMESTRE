@@ -33,6 +33,7 @@ Partial Class Form1
         ClientesToolStripMenuItem = New ToolStripMenuItem()
         PedidosToolStripMenuItem = New ToolStripMenuItem()
         FornecedoresToolStripMenuItem1 = New ToolStripMenuItem()
+        CategoriasToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -47,7 +48,7 @@ Partial Class Form1
         ' 
         ' CadastroToolStripMenuItem
         ' 
-        CadastroToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClienteToolStripMenuItem, FilmesToolStripMenuItem, FornecedoresToolStripMenuItem, PedidosToolStripMenuItem1})
+        CadastroToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClienteToolStripMenuItem, FilmesToolStripMenuItem, FornecedoresToolStripMenuItem, PedidosToolStripMenuItem1, CategoriasToolStripMenuItem})
         CadastroToolStripMenuItem.Name = "CadastroToolStripMenuItem"
         CadastroToolStripMenuItem.Size = New Size(66, 20)
         CadastroToolStripMenuItem.Text = "&Cadastro"
@@ -101,6 +102,12 @@ Partial Class Form1
         FornecedoresToolStripMenuItem1.Size = New Size(145, 22)
         FornecedoresToolStripMenuItem1.Text = "Fornecedores"
         ' 
+        ' CategoriasToolStripMenuItem
+        ' 
+        CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
+        CategoriasToolStripMenuItem.Size = New Size(180, 22)
+        CategoriasToolStripMenuItem.Text = "Categorias"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -130,4 +137,5 @@ Partial Class Form1
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PedidosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FornecedoresToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents CategoriasToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -17,3 +17,4 @@ C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeSta
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.Resources.resources
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadCli.resources
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadFornec.resources
+C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadCateg.resources
