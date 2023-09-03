@@ -26,7 +26,6 @@ C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeSta
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.AssemblyReference.cache
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.CopyComplete
-C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\Interop.ADOMD.dll
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\Interop.ADODB.dll
-C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\Interop.ADOR.dll
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.ResolveComReference.cache
+C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.pesqCli.resources

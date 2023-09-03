@@ -255,6 +255,7 @@ Partial Class cadFornec
         Controls.Add(txtNomeFornec)
         Controls.Add(Label3)
         Controls.Add(txtCodFornec)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "cadFornec"
         Text = "CADASTRO DE FORNECEDORES"

@@ -11,9 +11,19 @@
     Sub ConectarBanco()
         Try
             db = CreateObject("ADODB.Connection")
-            db.Open("Provider=SQLOLEDB;Data Source=DESKTOP-J8VD9D7\SQLEXPRESS;Initial Catalog=filmeStar;trusted_connection=yes;")
+            db.Open("Provider=SQLOLEDB;Data Source=DESKTOP-J8VD9D7;Initial Catalog=filmeStar;trusted_connection=yes;")
         Catch ex As Exception
-            MsgBox("ERRO | Conexão ao Banco não efetuada!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+            MsgBox("ERRO | Impossível se conectar ao banco de dados!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+        End Try
+    End Sub
+
+    Sub CarregarClientes()
+
+        Try
+            SQL = "SELECT * FROM tbClientes"
+            rs = db.Execute(SQL)
+        Catch ex As Exception
+            MsgBox("ERRO | Impossível carregar os dados da planilha.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try
     End Sub
 End Module

@@ -113,6 +113,7 @@ Partial Class cadCateg
         Controls.Add(TextBox1)
         Controls.Add(Label3)
         Controls.Add(txtCod)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "cadCateg"
         Text = "CADASTRO DE CATEGORIAS"
