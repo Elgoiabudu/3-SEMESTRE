@@ -95,3 +95,20 @@ VALUES
 
 SELECT * FROM tbFornec
 
+create table tbCateg(
+ID int primary key identity(1,1),
+descricao varchar(100)
+);
+
+insert into tbCateg (descricao)
+values
+('AÇÃO'),
+('AVENTURA'),
+('FICÇÃO CIENTÍFICA'),
+('TERROR'),
+('HORROR'),
+('COMÉDIA'),
+('DRAMA'),
+('ROMANCE');
+
+SELECT * FROM tbCateg

@@ -41,7 +41,7 @@ Partial Class Form1
         MenuStrip1.Items.AddRange(New ToolStripItem() {CadastroToolStripMenuItem, ConsultasToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(750, 24)
+        MenuStrip1.Size = New Size(1212, 24)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -107,11 +107,12 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(750, 409)
+        ClientSize = New Size(1212, 547)
         Controls.Add(MenuStrip1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MainMenuStrip = MenuStrip1
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FilmesStar"
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
