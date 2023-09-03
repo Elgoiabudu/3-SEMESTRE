@@ -65,5 +65,3 @@ INSERT INTO tbClientes (nome, sobrenome, email, cpf, rg, telefoneCel, telefoneFi
 VALUES ('Felipe', 'Ramos', 'felipe.ramos@email.com', '333.444.555-66', '3334445', '555-5555', '555-5555', 'Rua O', 'Vitória', 'ES', '33333-444');
 
 select * from tbClientes
-
-alter table tbClientes add 
