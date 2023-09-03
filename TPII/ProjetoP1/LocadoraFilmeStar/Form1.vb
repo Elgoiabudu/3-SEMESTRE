@@ -22,4 +22,8 @@
             MsgBox("ERRO | Erro no formulário de Cadastro de Categorias.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ERRO")
         End Try
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ConectarBanco()
+    End Sub
 End Class
