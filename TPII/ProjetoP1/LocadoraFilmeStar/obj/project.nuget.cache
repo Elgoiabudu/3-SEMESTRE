@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "Kne/ZLM8JDZtkmUfbWmUYyl1+CVdjOTEHyyQ0Ubjh6Gk5rxpKKG9frgXIykUO3wrqNYJfKCjG3OJkj3IK9wh0A==",
+  "dgSpecHash": "6D3OVkRifwNaFCAU+mnMB0wbx38pUh9SGIC4Evw7EqKP26KMJzWzibTWVVNHnwskMnrxsBGb5YkW6cP1uB9tgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fernando B. Leonelli\\Desktop\\3-SEMESTRE\\TPII\\ProjetoP1\\LocadoraFilmeStar\\LocadoraFilmeStar.vbproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
