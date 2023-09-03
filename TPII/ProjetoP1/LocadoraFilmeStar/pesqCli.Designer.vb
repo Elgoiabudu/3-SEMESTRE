@@ -52,7 +52,6 @@ Partial Class pesqCli
         btnSalvar = New Button()
         btnEditar = New Button()
         btnExcluir = New Button()
-        Button1 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -68,6 +67,7 @@ Partial Class pesqCli
         ' 
         ' txtCEP
         ' 
+        txtCEP.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtCEP.Enabled = False
         txtCEP.Location = New Point(767, 115)
         txtCEP.Name = "txtCEP"
@@ -85,6 +85,7 @@ Partial Class pesqCli
         ' 
         ' txtEstado
         ' 
+        txtEstado.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtEstado.Enabled = False
         txtEstado.Location = New Point(614, 115)
         txtEstado.Name = "txtEstado"
@@ -102,6 +103,7 @@ Partial Class pesqCli
         ' 
         ' txtCidade
         ' 
+        txtCidade.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtCidade.Enabled = False
         txtCidade.Location = New Point(443, 115)
         txtCidade.Name = "txtCidade"
@@ -119,6 +121,7 @@ Partial Class pesqCli
         ' 
         ' txtEndereco
         ' 
+        txtEndereco.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtEndereco.Enabled = False
         txtEndereco.Location = New Point(164, 115)
         txtEndereco.Name = "txtEndereco"
@@ -136,6 +139,7 @@ Partial Class pesqCli
         ' 
         ' txtCelular
         ' 
+        txtCelular.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtCelular.Enabled = False
         txtCelular.Location = New Point(11, 115)
         txtCelular.Name = "txtCelular"
@@ -153,6 +157,7 @@ Partial Class pesqCli
         ' 
         ' txtFixo
         ' 
+        txtFixo.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtFixo.Enabled = False
         txtFixo.Location = New Point(1063, 71)
         txtFixo.Name = "txtFixo"
@@ -170,6 +175,7 @@ Partial Class pesqCli
         ' 
         ' txtCPF
         ' 
+        txtCPF.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtCPF.Enabled = False
         txtCPF.Location = New Point(513, 71)
         txtCPF.Name = "txtCPF"
@@ -187,6 +193,7 @@ Partial Class pesqCli
         ' 
         ' txtRG
         ' 
+        txtRG.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtRG.Enabled = False
         txtRG.Location = New Point(362, 71)
         txtRG.Name = "txtRG"
@@ -204,6 +211,7 @@ Partial Class pesqCli
         ' 
         ' txtEmail
         ' 
+        txtEmail.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtEmail.Enabled = False
         txtEmail.Location = New Point(664, 71)
         txtEmail.Name = "txtEmail"
@@ -221,6 +229,7 @@ Partial Class pesqCli
         ' 
         ' txtCod
         ' 
+        txtCod.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtCod.Location = New Point(11, 27)
         txtCod.Name = "txtCod"
         txtCod.Size = New Size(144, 23)
@@ -247,6 +256,7 @@ Partial Class pesqCli
         ' 
         ' txtSobrenome
         ' 
+        txtSobrenome.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtSobrenome.Enabled = False
         txtSobrenome.Location = New Point(160, 71)
         txtSobrenome.Name = "txtSobrenome"
@@ -264,6 +274,7 @@ Partial Class pesqCli
         ' 
         ' txtNome
         ' 
+        txtNome.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         txtNome.Enabled = False
         txtNome.Location = New Point(11, 71)
         txtNome.Name = "txtNome"
@@ -312,23 +323,11 @@ Partial Class pesqCli
         btnExcluir.TextAlign = ContentAlignment.MiddleRight
         btnExcluir.UseVisualStyleBackColor = True
         ' 
-        ' Button1
-        ' 
-        Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), Image)
-        Button1.BackgroundImageLayout = ImageLayout.None
-        Button1.Location = New Point(164, 9)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(40, 41)
-        Button1.TabIndex = 61
-        Button1.TextAlign = ContentAlignment.MiddleRight
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' pesqCli
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1333, 584)
-        Controls.Add(Button1)
         Controls.Add(btnExcluir)
         Controls.Add(btnEditar)
         Controls.Add(btnSalvar)
@@ -396,5 +395,4 @@ Partial Class pesqCli
     Friend WithEvents btnSalvar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnExcluir As Button
-    Friend WithEvents Button1 As Button
 End Class
