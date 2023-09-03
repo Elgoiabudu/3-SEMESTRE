@@ -28,11 +28,11 @@ Partial Class Form1
         ClienteToolStripMenuItem = New ToolStripMenuItem()
         FilmesToolStripMenuItem = New ToolStripMenuItem()
         FornecedoresToolStripMenuItem = New ToolStripMenuItem()
+        PedidosToolStripMenuItem1 = New ToolStripMenuItem()
         ConsultasToolStripMenuItem = New ToolStripMenuItem()
         ClientesToolStripMenuItem = New ToolStripMenuItem()
         PedidosToolStripMenuItem = New ToolStripMenuItem()
         FornecedoresToolStripMenuItem1 = New ToolStripMenuItem()
-        PedidosToolStripMenuItem1 = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -70,6 +70,12 @@ Partial Class Form1
         FornecedoresToolStripMenuItem.Size = New Size(180, 22)
         FornecedoresToolStripMenuItem.Text = "Fornecedores"
         ' 
+        ' PedidosToolStripMenuItem1
+        ' 
+        PedidosToolStripMenuItem1.Name = "PedidosToolStripMenuItem1"
+        PedidosToolStripMenuItem1.Size = New Size(180, 22)
+        PedidosToolStripMenuItem1.Text = "Pedidos"
+        ' 
         ' ConsultasToolStripMenuItem
         ' 
         ConsultasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClientesToolStripMenuItem, PedidosToolStripMenuItem, FornecedoresToolStripMenuItem1})
@@ -80,26 +86,20 @@ Partial Class Form1
         ' ClientesToolStripMenuItem
         ' 
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        ClientesToolStripMenuItem.Size = New Size(180, 22)
+        ClientesToolStripMenuItem.Size = New Size(145, 22)
         ClientesToolStripMenuItem.Text = "Clientes"
         ' 
         ' PedidosToolStripMenuItem
         ' 
         PedidosToolStripMenuItem.Name = "PedidosToolStripMenuItem"
-        PedidosToolStripMenuItem.Size = New Size(180, 22)
+        PedidosToolStripMenuItem.Size = New Size(145, 22)
         PedidosToolStripMenuItem.Text = "Pedidos"
         ' 
         ' FornecedoresToolStripMenuItem1
         ' 
         FornecedoresToolStripMenuItem1.Name = "FornecedoresToolStripMenuItem1"
-        FornecedoresToolStripMenuItem1.Size = New Size(180, 22)
+        FornecedoresToolStripMenuItem1.Size = New Size(145, 22)
         FornecedoresToolStripMenuItem1.Text = "Fornecedores"
-        ' 
-        ' PedidosToolStripMenuItem1
-        ' 
-        PedidosToolStripMenuItem1.Name = "PedidosToolStripMenuItem1"
-        PedidosToolStripMenuItem1.Size = New Size(180, 22)
-        PedidosToolStripMenuItem1.Text = "Pedidos"
         ' 
         ' Form1
         ' 

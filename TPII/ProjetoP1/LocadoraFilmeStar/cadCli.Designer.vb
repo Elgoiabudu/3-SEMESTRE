@@ -297,7 +297,7 @@ Partial Class cadCli
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(442, 372)
+        ClientSize = New Size(437, 372)
         Controls.Add(btnCancelar)
         Controls.Add(btnLimpar)
         Controls.Add(btnSalvar)
@@ -329,7 +329,7 @@ Partial Class cadCli
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "cadCli"
-        Text = "Cadastro de Clientes"
+        Text = "CADASTRO DE CLIENTES"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
