@@ -2,7 +2,7 @@
     Public diretorio, SQL, aux_cpf, resp As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public cont As Integer
+    Public cont, aux_id As Integer
 
     Sub CarregarTipo()
 

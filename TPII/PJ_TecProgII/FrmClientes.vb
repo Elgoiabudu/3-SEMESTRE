@@ -24,19 +24,25 @@
         Try
             SQL = "SELECT * FROM tb_usuario WHERE cpf = '" & TxtCPF.Text & "'"
             rs = db.Execute(SQL)
+            aux_id = rs.Fields(0).Value
             If rs.EOF = True Then
                 SQL = "INSERT INTO tb_usuario (cpf, nome, foto) VALUES ('" & TxtCPF.Text & "', " &
                       "'" & TxtNome.Text & "', '" & diretorio & "')"
                 rs = db.Execute(UCase(SQL))
                 MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO")
-                TxtCPF.Clear()
-                TxtNome.Clear()
-                ImgFoto.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\bin\Debug\", "\Fotos\NovaFoto.png"))
-                TxtCPF.Focus()
-                CarregarDados()
             Else
-                MsgBox("ERRO | CPF já cadastrado!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+                SQL = $"UPDATE tb_usuario SET cpf='{TxtCPF.Text}', nome='{TxtNome.Text}', foto='{diretorio}'
+                        WHERE id_cliente='{aux_id}'"
+                rs = db.Execute(SQL)
+                MsgBox("Dados Alterados com Sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
             End If
+
+            TxtCPF.Clear()
+            TxtNome.Clear()
+            ImgFoto.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\bin\Debug\", "\Fotos\NovaFoto.png"))
+            TxtCPF.Focus()
+            CarregarDados()
+
         Catch ex As Exception
             MsgBox("ERRO | Registro não foi salvo no banco!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try
