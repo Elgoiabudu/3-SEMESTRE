@@ -1,0 +1,16 @@
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\bin\Debug\net6.0-windows\TrabalhoMagno.exe
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\bin\Debug\net6.0-windows\TrabalhoMagno.deps.json
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\bin\Debug\net6.0-windows\TrabalhoMagno.runtimeconfig.json
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\bin\Debug\net6.0-windows\TrabalhoMagno.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\bin\Debug\net6.0-windows\TrabalhoMagno.pdb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.Form1.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.vbproj.GenerateResource.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.AssemblyInfoInputs.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.AssemblyInfo.vb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.vbproj.CoreCompileInputs.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\refint\TrabalhoMagno.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.pdb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.genruntimeconfig.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\ref\TrabalhoMagno.dll
