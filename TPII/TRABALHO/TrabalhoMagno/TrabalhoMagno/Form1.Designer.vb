@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tbcFunc = New TabControl()
         TabPage1 = New TabPage()
         Button2 = New Button()
@@ -94,7 +95,7 @@ Partial Class Form1
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(146, 208)
+        Button2.Location = New Point(332, 213)
         Button2.Name = "Button2"
         Button2.Size = New Size(134, 43)
         Button2.TabIndex = 11
@@ -103,7 +104,7 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(6, 208)
+        Button1.Location = New Point(192, 213)
         Button1.Name = "Button1"
         Button1.Size = New Size(134, 43)
         Button1.TabIndex = 10
@@ -224,6 +225,8 @@ Partial Class Form1
         ' 
         ' foto
         ' 
+        foto.BackgroundImage = CType(resources.GetObject("foto.BackgroundImage"), Image)
+        foto.BackgroundImageLayout = ImageLayout.Zoom
         foto.Location = New Point(526, 21)
         foto.Name = "foto"
         foto.Size = New Size(135, 170)
