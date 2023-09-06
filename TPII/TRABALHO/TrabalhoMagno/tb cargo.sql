@@ -11,6 +11,10 @@ CREATE TABLE Tb_Funcionario (
 	INSS DECIMAL(14, 2)
 );
 
+
+
+
+
 create table cargo (
 id int primary key identity(1,1),
 cargo varchar(20) not null
@@ -29,3 +33,4 @@ insert into cargo values
 ('PRESIDENTE')
 
 SELECT * FROM cargo
+select * from Tb_Funcionario

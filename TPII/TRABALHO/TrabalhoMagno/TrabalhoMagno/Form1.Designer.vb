@@ -25,8 +25,8 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tbcFunc = New TabControl()
         TabPage1 = New TabPage()
-        Button2 = New Button()
-        Button1 = New Button()
+        btnLimpar = New Button()
+        btnSalvar = New Button()
         GroupBox1 = New GroupBox()
         txtSalLiq = New TextBox()
         Label5 = New Label()
@@ -53,6 +53,7 @@ Partial Class Form1
         liquido = New DataGridViewTextBoxColumn()
         acao = New DataGridViewTextBoxColumn()
         TextBox6 = New TextBox()
+        OpenFileDialog1 = New OpenFileDialog()
         tbcFunc.SuspendLayout()
         TabPage1.SuspendLayout()
         GroupBox1.SuspendLayout()
@@ -73,8 +74,8 @@ Partial Class Form1
         ' 
         ' TabPage1
         ' 
-        TabPage1.Controls.Add(Button2)
-        TabPage1.Controls.Add(Button1)
+        TabPage1.Controls.Add(btnLimpar)
+        TabPage1.Controls.Add(btnSalvar)
         TabPage1.Controls.Add(GroupBox1)
         TabPage1.Controls.Add(txtQtdSal)
         TabPage1.Controls.Add(Label4)
@@ -93,23 +94,23 @@ Partial Class Form1
         TabPage1.Text = "DADOS DOS FUNCIONÁRIOS"
         TabPage1.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnLimpar
         ' 
-        Button2.Location = New Point(332, 213)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(134, 43)
-        Button2.TabIndex = 11
-        Button2.Text = "LIMPAR"
-        Button2.UseVisualStyleBackColor = True
+        btnLimpar.Location = New Point(332, 213)
+        btnLimpar.Name = "btnLimpar"
+        btnLimpar.Size = New Size(134, 43)
+        btnLimpar.TabIndex = 11
+        btnLimpar.Text = "LIMPAR"
+        btnLimpar.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' btnSalvar
         ' 
-        Button1.Location = New Point(192, 213)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(134, 43)
-        Button1.TabIndex = 10
-        Button1.Text = "SALVAR"
-        Button1.UseVisualStyleBackColor = True
+        btnSalvar.Location = New Point(192, 213)
+        btnSalvar.Name = "btnSalvar"
+        btnSalvar.Size = New Size(134, 43)
+        btnSalvar.TabIndex = 10
+        btnSalvar.Text = "SALVAR"
+        btnSalvar.UseVisualStyleBackColor = True
         ' 
         ' GroupBox1
         ' 
@@ -226,10 +227,11 @@ Partial Class Form1
         ' foto
         ' 
         foto.BackgroundImage = CType(resources.GetObject("foto.BackgroundImage"), Image)
-        foto.BackgroundImageLayout = ImageLayout.Zoom
+        foto.BackgroundImageLayout = ImageLayout.Stretch
         foto.Location = New Point(526, 21)
         foto.Name = "foto"
         foto.Size = New Size(135, 170)
+        foto.SizeMode = PictureBoxSizeMode.StretchImage
         foto.TabIndex = 2
         foto.TabStop = False
         ' 
@@ -314,6 +316,10 @@ Partial Class Form1
         TextBox6.Size = New Size(285, 23)
         TextBox6.TabIndex = 0
         ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -362,6 +368,7 @@ Partial Class Form1
     Friend WithEvents inss As DataGridViewTextBoxColumn
     Friend WithEvents liquido As DataGridViewTextBoxColumn
     Friend WithEvents acao As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnLimpar As Button
+    Friend WithEvents btnSalvar As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

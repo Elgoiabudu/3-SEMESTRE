@@ -14,3 +14,6 @@ C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagn
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.pdb
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.genruntimeconfig.cache
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\ref\TrabalhoMagno.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\Interop.ADODB.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.vbproj.ResolveComReference.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\TRABALHO\TrabalhoMagno\TrabalhoMagno\obj\Debug\net6.0-windows\TrabalhoMagno.Resources.resources
