@@ -1,6 +1,7 @@
 ﻿Public Class Form1
 
     Private Sub Limpar()
+        'Sub limpar para ser reaproveitada
         txtCpf.Text = ""
         txtNome.Text = ""
         txtQtdSal.Text = ""
@@ -13,11 +14,15 @@
     End Sub
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
         Try
+            'QUERY inicial
             SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{txtCpf.Text}'"
             rs = db.Execute(SQL)
             aux_id = rs.Fields(0).Value
+
+            'verificando se existe algum registro no banco
             If rs.EOF = True Then
 
+                'caso não tenha, ele faz o insert.
                 SQL = $"INSERT INTO Tb_Funcionario (nome, cargo, caminhoFoto, CPF, dataAdmissao, salarioBruto, salarioLiquido, INSS)
                     VALUES
                     ('{txtNome.Text}', '{cbCargo.SelectedItem}', '{diretorio}', '{txtCpf.Text}', '{dataAdm.Value.Date}', {txtSalBruto.Text}, {txtSalLiq.Text}, {txtINSS.Text});"
@@ -27,6 +32,7 @@
 
             Else
 
+                'caso exista, faz o update
                 SQL = $"UPDATE Tb_Funcionario SET
                         nome='{txtNome.Text}',
                         cargo ='{cbCargo.SelectedItem}',
@@ -45,12 +51,16 @@
             End If
 
         Catch ex As Exception
+
+            'tratamento de erros
             MsgBox("ERRO | Registro não foi processado no banco! Verifique os dados digitados.")
         End Try
 
     End Sub
 
     Private Sub foto_Click(sender As Object, e As EventArgs) Handles foto.Click
+
+        'carregando a foto na PictureBox foto
         Try
             With OpenFileDialog1
                 .Title = "SELECIONE UMA FOTO"
@@ -65,6 +75,7 @@
     End Sub
 
     Private Sub txtQtdSal_KeyPress(sender As Object, e As EventArgs) Handles txtQtdSal.LostFocus
+
         'preenchendo o salario bruto, inss e salario liquido
         Try
             Dim bruto = txtQtdSal.Text * 1320
@@ -81,28 +92,38 @@
             End If
 
         Catch ex As Exception
+
+            'tratamento de erros de digitação ou não digitação
             MsgBox("ERRO | Informe uma quantidade de salários válida!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ERRO")
             txtSalBruto.Text = ""
             txtINSS.Text = ""
             txtSalLiq.Text = ""
+
         End Try
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'executando a conexão com banco de dados
         ConectarBanco()
+
+        'preenchendo a combo box com os cargos
         CarregarTipo()
     End Sub
 
     Private Sub txtQtdSal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQtdSal.KeyPress
+
         'Apenas números e vírgula
         If Not Char.IsDigit(e.KeyChar) And Asc(e.KeyChar) <> 8 And e.KeyChar <> "," Then
             e.Handled = True
         Else
             e.Handled = False
         End If
+
     End Sub
 
     Private Sub txtCpf_LostFocus(sender As Object, e As EventArgs) Handles txtCpf.LostFocus
+
+        'caso exista algum registro já cadastrado, faz o preenchimento dos campos no form de cadastro
         Try
             SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{txtCpf.Text}'"
             rs = db.Execute(SQL)
@@ -123,6 +144,7 @@
 
         Catch ex As Exception
 
+            'caso não exista registro com o cpf digitado, limpa os campo ou não faz nada.
             txtNome.Text = ""
             txtQtdSal.Text = ""
             txtQtdSal.Text = ""
