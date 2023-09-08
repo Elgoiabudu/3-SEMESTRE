@@ -1,4 +1,5 @@
 ﻿Module ControleFuncs
+    'declarando as variáveis publicas do model
     Public diretorio, SQL As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
@@ -51,7 +52,8 @@
         End Try
     End Sub
 
-    Sub FillDgv()
+    Sub FillDgv() 'prenchendo o data gridview
+
         SQL = $"SELECT * FROM Tb_Funcionario"
         rs = db.Execute(SQL)
 
@@ -67,8 +69,6 @@
             Loop
 
         End With
-
-
     End Sub
 
 End Module

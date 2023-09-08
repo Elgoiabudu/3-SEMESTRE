@@ -183,7 +183,9 @@
 
     Private Sub dgvFunc_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFunc.CellContentClick
 
+        'habilitando os botês de editar e excluir registro
         With dgvFunc
+            'editar
             If .CurrentRow.Cells(7).Selected Then
                 Dim auxCpf = .CurrentRow.Cells(3).Value
                 SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{auxCpf}'"
@@ -203,6 +205,7 @@
                 txtINSS.Text = Replace(rs.Fields(8).Value, ",", ".")
             End If
 
+            'excluir
             If .CurrentRow.Cells(8).Selected Then
                 Dim auxCpf = .CurrentRow.Cells(3).Value
                 SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{auxCpf}'"
@@ -223,6 +226,8 @@
     End Sub
 
     Private Sub txtPesq_TextChanged(sender As Object, e As EventArgs) Handles txtPesq.TextChanged
+
+        'mineiração de dados em tempo real
         Try
             SQL = $"SELECT * FROM Tb_Funcionario WHERE nome LIKE '{txtPesq.Text}%'"
             rs = db.Execute(SQL)
@@ -238,10 +243,13 @@
 
             End With
         Catch ex As Exception
+            'em caso de não achar, retorna o datagridview em branco
         End Try
     End Sub
 
     Private Sub txtNome_TextChanged(sender As Object, e As EventArgs) Handles txtNome.TextChanged
+        'nome sempre em maiúscula
         txtNome.Text = txtNome.Text.ToUpper()
+        txtNome.SelectionStart = txtNome.Text.Length
     End Sub
 End Class

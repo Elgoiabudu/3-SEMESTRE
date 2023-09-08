@@ -25,6 +25,8 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         OpenFileDialog1 = New OpenFileDialog()
         TabPage1 = New TabPage()
+        Label9 = New Label()
+        txtPesq = New TextBox()
         dgvFunc = New DataGridView()
         nome = New DataGridViewTextBoxColumn()
         cargo = New DataGridViewTextBoxColumn()
@@ -55,8 +57,6 @@ Partial Class Form1
         foto = New PictureBox()
         Label1 = New Label()
         tbcFunc = New TabControl()
-        txtPesq = New TextBox()
-        Label9 = New Label()
         TabPage1.SuspendLayout()
         CType(dgvFunc, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
@@ -93,6 +93,22 @@ Partial Class Form1
         TabPage1.TabIndex = 0
         TabPage1.Text = "DADOS DOS FUNCIONÁRIOS"
         TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(667, 149)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(196, 15)
+        Label9.TabIndex = 16
+        Label9.Text = "DIGITE UM NOME PARA PESQUISAR"
+        ' 
+        ' txtPesq
+        ' 
+        txtPesq.Location = New Point(667, 168)
+        txtPesq.Name = "txtPesq"
+        txtPesq.Size = New Size(418, 23)
+        txtPesq.TabIndex = 14
         ' 
         ' dgvFunc
         ' 
@@ -357,28 +373,13 @@ Partial Class Form1
         tbcFunc.Size = New Size(1230, 632)
         tbcFunc.TabIndex = 0
         ' 
-        ' txtPesq
-        ' 
-        txtPesq.Location = New Point(667, 168)
-        txtPesq.Name = "txtPesq"
-        txtPesq.Size = New Size(418, 23)
-        txtPesq.TabIndex = 14
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Location = New Point(667, 149)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(196, 15)
-        Label9.TabIndex = 16
-        Label9.Text = "DIGITE UM NOME PARA PESQUISAR"
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1236, 651)
         Controls.Add(tbcFunc)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "Form1"
         Text = "CADASTRO DE FUNCINÁRIOS"
