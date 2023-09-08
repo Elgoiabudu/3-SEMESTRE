@@ -2,8 +2,20 @@
     Public diretorio, SQL As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public cont As Integer
+    Public cont, aux_id As Integer
+
+    Sub ConectarBanco()
+        'Fazendo a conexão com Banco de Dados
+        Try
+            db = CreateObject("ADODB.Connection")
+            db.Open("Provider=SQLOLEDB;Data Source=DESKTOP-J8VD9D7;Initial Catalog=DbSalario;trusted_connection=yes;")
+        Catch ex As Exception
+            MsgBox("ERRO | Conexão ao Banco não efetuada!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+        End Try
+    End Sub
+
     Sub CarregarDados()
+        'Preenchendo o DataGridView de funcionários
         Try
             SQL = "SELECT * FROM Tb_Funcionario order by nome asc"
             rs = db.Execute(SQL)
@@ -21,6 +33,7 @@
     End Sub
 
     Sub CarregarTipo()
+        'preenchendo os dados da comboBox
         Try
             With Form1.cbCargo.Items
                 .Add("DESENVOLVEDOR JUNIOR")

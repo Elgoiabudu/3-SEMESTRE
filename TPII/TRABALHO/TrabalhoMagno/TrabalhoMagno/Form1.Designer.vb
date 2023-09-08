@@ -25,7 +25,8 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         tbcFunc = New TabControl()
         TabPage1 = New TabPage()
-        btnLimpar = New Button()
+        txtCpf = New MaskedTextBox()
+        Label8 = New Label()
         btnSalvar = New Button()
         GroupBox1 = New GroupBox()
         txtSalLiq = New TextBox()
@@ -74,7 +75,8 @@ Partial Class Form1
         ' 
         ' TabPage1
         ' 
-        TabPage1.Controls.Add(btnLimpar)
+        TabPage1.Controls.Add(txtCpf)
+        TabPage1.Controls.Add(Label8)
         TabPage1.Controls.Add(btnSalvar)
         TabPage1.Controls.Add(GroupBox1)
         TabPage1.Controls.Add(txtQtdSal)
@@ -94,18 +96,26 @@ Partial Class Form1
         TabPage1.Text = "DADOS DOS FUNCIONÁRIOS"
         TabPage1.UseVisualStyleBackColor = True
         ' 
-        ' btnLimpar
+        ' txtCpf
         ' 
-        btnLimpar.Location = New Point(332, 213)
-        btnLimpar.Name = "btnLimpar"
-        btnLimpar.Size = New Size(134, 43)
-        btnLimpar.TabIndex = 11
-        btnLimpar.Text = "LIMPAR"
-        btnLimpar.UseVisualStyleBackColor = True
+        txtCpf.Location = New Point(6, 21)
+        txtCpf.Mask = "000,000,000-00"
+        txtCpf.Name = "txtCpf"
+        txtCpf.Size = New Size(134, 23)
+        txtCpf.TabIndex = 1
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(6, 3)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(28, 15)
+        Label8.TabIndex = 12
+        Label8.Text = "CPF"
         ' 
         ' btnSalvar
         ' 
-        btnSalvar.Location = New Point(192, 213)
+        btnSalvar.Location = New Point(261, 214)
         btnSalvar.Name = "btnSalvar"
         btnSalvar.Size = New Size(134, 43)
         btnSalvar.TabIndex = 10
@@ -129,6 +139,7 @@ Partial Class Form1
         ' 
         ' txtSalLiq
         ' 
+        txtSalLiq.Enabled = False
         txtSalLiq.Location = New Point(364, 41)
         txtSalLiq.Name = "txtSalLiq"
         txtSalLiq.Size = New Size(144, 23)
@@ -154,6 +165,7 @@ Partial Class Form1
         ' 
         ' txtSalBruto
         ' 
+        txtSalBruto.Enabled = False
         txtSalBruto.Location = New Point(6, 41)
         txtSalBruto.Name = "txtSalBruto"
         txtSalBruto.Size = New Size(144, 23)
@@ -161,6 +173,7 @@ Partial Class Form1
         ' 
         ' txtINSS
         ' 
+        txtINSS.Enabled = False
         txtINSS.Location = New Point(186, 41)
         txtINSS.Name = "txtINSS"
         txtINSS.Size = New Size(144, 23)
@@ -237,15 +250,15 @@ Partial Class Form1
         ' 
         ' txtNome
         ' 
-        txtNome.Location = New Point(6, 21)
+        txtNome.Location = New Point(154, 21)
         txtNome.Name = "txtNome"
-        txtNome.Size = New Size(514, 23)
-        txtNome.TabIndex = 1
+        txtNome.Size = New Size(366, 23)
+        txtNome.TabIndex = 2
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(6, 3)
+        Label1.Location = New Point(154, 3)
         Label1.Name = "Label1"
         Label1.Size = New Size(144, 15)
         Label1.TabIndex = 0
@@ -368,7 +381,8 @@ Partial Class Form1
     Friend WithEvents inss As DataGridViewTextBoxColumn
     Friend WithEvents liquido As DataGridViewTextBoxColumn
     Friend WithEvents acao As DataGridViewTextBoxColumn
-    Friend WithEvents btnLimpar As Button
     Friend WithEvents btnSalvar As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents txtCpf As MaskedTextBox
+    Friend WithEvents Label8 As Label
 End Class
