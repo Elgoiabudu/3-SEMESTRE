@@ -55,6 +55,20 @@
         SQL = $"SELECT * FROM Tb_Funcionario"
         rs = db.Execute(SQL)
 
+        With Form1.dgvFunc
+            cont = 1
+            .Rows.Clear()
+
+            Do While rs.EOF = False
+                .Rows.Add(rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(5).Value, rs.Fields(4).Value,
+                          rs.Fields(6).Value, rs.Fields(8).Value, rs.Fields(7).Value, Nothing, Nothing)
+                rs.MoveNext()
+                cont += 1
+
+            Loop
+
+        End With
+
 
     End Sub
 

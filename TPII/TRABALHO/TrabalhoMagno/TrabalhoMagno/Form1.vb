@@ -18,6 +18,11 @@
             SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{txtCpf.Text}'"
             rs = db.Execute(SQL)
 
+            If diretorio = "" Then
+                MsgBox("ERRO | Registro não foi processado no banco! Verifique os dados digitados.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+                Exit Sub
+            End If
+
             'verificando se existe algum registro no banco
             If rs.EOF = True Then
 
@@ -43,6 +48,7 @@
                 rs = db.Execute(SQL)
                 MsgBox("DADOS GRAVADOS COM SUCESSO!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "SUCESSO")
                 Limpar()
+                FillDgv()
             Else
 
                 'caso exista, faz o update levando em conta a ID
@@ -53,20 +59,20 @@
                 dataAdmissao ='{dataAdm.Value.Date}',
                 salarioBruto ='{txtSalBruto.Text}',
                 salarioLiquido ='{txtSalLiq.Text}',
-                INSS='{txtINSS.Text}',
-                cpf ='{txtCpf.Text}'
+                INSS='{txtINSS.Text}'                
                 WHERE
-                id ={aux_id}"
+                cpf ='{txtCpf.Text}'"
                 rs = db.Execute(SQL)
                 MsgBox("DADOS ALTERADOS COM SUCESSO!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "SUCESSO")
                 Limpar()
+                FillDgv()
 
             End If
 
         Catch ex As Exception
 
             'tratamento de erros
-            MsgBox("ERRO | Registro não foi processado no banco! Verifique os dados digitados.")
+            MsgBox("ERRO | Registro não foi processado no banco! Verifique os dados digitados.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
         End Try
 
     End Sub
@@ -172,6 +178,47 @@
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub dgvFunc_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFunc.CellContentClick
+
+        With dgvFunc
+            If .CurrentRow.Cells(7).Selected Then
+                Dim auxCpf = .CurrentRow.Cells(3).Value
+                SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{auxCpf}'"
+                rs = db.Execute(SQL)
+
+                Dim qtdSal = rs.Fields(6).Value / 1320
+
+                txtCpf.Text = rs.Fields(4).Value
+                txtNome.Text = rs.Fields(1).Value
+                cbCargo.Text = rs.Fields(2).Value
+                foto.Load(rs.Fields(3).Value)
+                diretorio = rs.Fields(3).Value
+                dataAdm.Value = rs.Fields(5).Value
+                txtQtdSal.Text = qtdSal
+                txtSalBruto.Text = Replace(rs.Fields(6).Value, ",", ".")
+                txtSalLiq.Text = Replace(rs.Fields(7).Value, ",", ".")
+                txtINSS.Text = Replace(rs.Fields(8).Value, ",", ".")
+            End If
+
+            If .CurrentRow.Cells(8).Selected Then
+                Dim auxCpf = .CurrentRow.Cells(3).Value
+                SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{auxCpf}'"
+                rs = db.Execute(SQL)
+
+                If rs.EOF = False Then
+                    Dim resp = MsgBox("ATENÇÃO | Deseja excluir o registro?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "ATENÇÃO!")
+                    If resp = MsgBoxResult.Yes Then
+                        SQL = $"DELETE FROM Tb_Funcionario WHERE CPF='{auxCpf}'"
+                        rs = db.Execute(SQL)
+                        Limpar()
+                        FillDgv()
+                    End If
+                End If
+            End If
+        End With
 
     End Sub
 End Class

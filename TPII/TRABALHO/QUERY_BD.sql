@@ -15,7 +15,7 @@ CREATE TABLE Tb_Funcionario (
 
 select * from Tb_Funcionario
 
-delete from Tb_Funcionario
+delete from Tb_Funcionario 
 
 INSERT INTO Tb_Funcionario (nome, cargo, caminhoFoto, CPF, dataAdmissao, salarioBruto, salarioLiquido, INSS)
 VALUES ('João da Silva', 'Analista de Vendas', '/fotos/joao.jpg', '123.456.789-00', '2023-09-08', 5000.00, 4200.00, 800.00);

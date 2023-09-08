@@ -25,9 +25,18 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         OpenFileDialog1 = New OpenFileDialog()
         TabPage1 = New TabPage()
+        dgvFunc = New DataGridView()
+        nome = New DataGridViewTextBoxColumn()
+        cargo = New DataGridViewTextBoxColumn()
+        admissao = New DataGridViewTextBoxColumn()
+        CPF = New DataGridViewTextBoxColumn()
+        BRUTO = New DataGridViewTextBoxColumn()
+        INSS = New DataGridViewTextBoxColumn()
+        LIQUIDO = New DataGridViewTextBoxColumn()
+        EDITAR = New DataGridViewImageColumn()
+        DELETAR = New DataGridViewImageColumn()
         txtCpf = New MaskedTextBox()
         Label8 = New Label()
-        btnSalvar = New Button()
         GroupBox1 = New GroupBox()
         txtSalLiq = New TextBox()
         Label5 = New Label()
@@ -45,14 +54,12 @@ Partial Class Form1
         foto = New PictureBox()
         Label1 = New Label()
         tbcFunc = New TabControl()
-        dgvFunc = New DataGridView()
-        nome = New DataGridViewTextBoxColumn()
-        cargo = New DataGridViewTextBoxColumn()
+        btnSalvar = New Button()
         TabPage1.SuspendLayout()
+        CType(dgvFunc, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         CType(foto, ComponentModel.ISupportInitialize).BeginInit()
         tbcFunc.SuspendLayout()
-        CType(dgvFunc, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' OpenFileDialog1
@@ -83,6 +90,90 @@ Partial Class Form1
         TabPage1.Text = "DADOS DOS FUNCIONÁRIOS"
         TabPage1.UseVisualStyleBackColor = True
         ' 
+        ' dgvFunc
+        ' 
+        dgvFunc.AllowUserToAddRows = False
+        dgvFunc.AllowUserToDeleteRows = False
+        dgvFunc.AllowUserToResizeColumns = False
+        dgvFunc.AllowUserToResizeRows = False
+        dgvFunc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvFunc.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        dgvFunc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvFunc.Columns.AddRange(New DataGridViewColumn() {nome, cargo, admissao, CPF, BRUTO, INSS, LIQUIDO, EDITAR, DELETAR})
+        dgvFunc.GridColor = SystemColors.ButtonFace
+        dgvFunc.Location = New Point(6, 197)
+        dgvFunc.Name = "dgvFunc"
+        dgvFunc.ReadOnly = True
+        dgvFunc.RowTemplate.Height = 25
+        dgvFunc.Size = New Size(1210, 401)
+        dgvFunc.TabIndex = 13
+        ' 
+        ' nome
+        ' 
+        nome.HeaderText = "NOME"
+        nome.Name = "nome"
+        nome.ReadOnly = True
+        nome.Resizable = DataGridViewTriState.False
+        ' 
+        ' cargo
+        ' 
+        cargo.HeaderText = "CARGO"
+        cargo.Name = "cargo"
+        cargo.ReadOnly = True
+        cargo.Resizable = DataGridViewTriState.False
+        ' 
+        ' admissao
+        ' 
+        admissao.HeaderText = "ADMISSAO"
+        admissao.Name = "admissao"
+        admissao.ReadOnly = True
+        admissao.Resizable = DataGridViewTriState.False
+        ' 
+        ' CPF
+        ' 
+        CPF.HeaderText = "CPF"
+        CPF.Name = "CPF"
+        CPF.ReadOnly = True
+        CPF.Resizable = DataGridViewTriState.False
+        ' 
+        ' BRUTO
+        ' 
+        BRUTO.HeaderText = "SAL. BRUTO"
+        BRUTO.Name = "BRUTO"
+        BRUTO.ReadOnly = True
+        BRUTO.Resizable = DataGridViewTriState.False
+        ' 
+        ' INSS
+        ' 
+        INSS.HeaderText = "INSS"
+        INSS.Name = "INSS"
+        INSS.ReadOnly = True
+        INSS.Resizable = DataGridViewTriState.False
+        ' 
+        ' LIQUIDO
+        ' 
+        LIQUIDO.HeaderText = "SAL. LIQUIDO"
+        LIQUIDO.Name = "LIQUIDO"
+        LIQUIDO.ReadOnly = True
+        LIQUIDO.Resizable = DataGridViewTriState.False
+        ' 
+        ' EDITAR
+        ' 
+        EDITAR.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        EDITAR.HeaderText = "EDITAR"
+        EDITAR.Image = CType(resources.GetObject("EDITAR.Image"), Image)
+        EDITAR.MinimumWidth = 3
+        EDITAR.Name = "EDITAR"
+        EDITAR.ReadOnly = True
+        EDITAR.Width = 129
+        ' 
+        ' DELETAR
+        ' 
+        DELETAR.HeaderText = "DELETAR"
+        DELETAR.Image = CType(resources.GetObject("DELETAR.Image"), Image)
+        DELETAR.Name = "DELETAR"
+        DELETAR.ReadOnly = True
+        ' 
         ' txtCpf
         ' 
         txtCpf.Location = New Point(6, 21)
@@ -99,15 +190,6 @@ Partial Class Form1
         Label8.Size = New Size(28, 15)
         Label8.TabIndex = 12
         Label8.Text = "CPF"
-        ' 
-        ' btnSalvar
-        ' 
-        btnSalvar.Location = New Point(667, 21)
-        btnSalvar.Name = "btnSalvar"
-        btnSalvar.Size = New Size(134, 43)
-        btnSalvar.TabIndex = 10
-        btnSalvar.Text = "SALVAR"
-        btnSalvar.UseVisualStyleBackColor = True
         ' 
         ' GroupBox1
         ' 
@@ -260,29 +342,16 @@ Partial Class Form1
         tbcFunc.Size = New Size(1230, 632)
         tbcFunc.TabIndex = 0
         ' 
-        ' dgvFunc
+        ' btnSalvar
         ' 
-        dgvFunc.AllowUserToAddRows = False
-        dgvFunc.AllowUserToDeleteRows = False
-        dgvFunc.AllowUserToResizeColumns = False
-        dgvFunc.AllowUserToResizeRows = False
-        dgvFunc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvFunc.Columns.AddRange(New DataGridViewColumn() {nome, cargo})
-        dgvFunc.Location = New Point(6, 197)
-        dgvFunc.Name = "dgvFunc"
-        dgvFunc.RowTemplate.Height = 25
-        dgvFunc.Size = New Size(795, 150)
-        dgvFunc.TabIndex = 13
-        ' 
-        ' nome
-        ' 
-        nome.HeaderText = "NOME"
-        nome.Name = "nome"
-        ' 
-        ' cargo
-        ' 
-        cargo.HeaderText = "CARGO"
-        cargo.Name = "cargo"
+        btnSalvar.BackColor = Color.Transparent
+        btnSalvar.BackgroundImage = CType(resources.GetObject("btnSalvar.BackgroundImage"), Image)
+        btnSalvar.BackgroundImageLayout = ImageLayout.Center
+        btnSalvar.Location = New Point(667, 21)
+        btnSalvar.Name = "btnSalvar"
+        btnSalvar.Size = New Size(66, 67)
+        btnSalvar.TabIndex = 10
+        btnSalvar.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
@@ -290,22 +359,22 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1236, 651)
         Controls.Add(tbcFunc)
+        MaximizeBox = False
         Name = "Form1"
         Text = "CADASTRO DE FUNCINÁRIOS"
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
+        CType(dgvFunc, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         CType(foto, ComponentModel.ISupportInitialize).EndInit()
         tbcFunc.ResumeLayout(False)
-        CType(dgvFunc, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents txtCpf As MaskedTextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents btnSalvar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtSalLiq As TextBox
     Friend WithEvents Label5 As Label
@@ -326,4 +395,12 @@ Partial Class Form1
     Friend WithEvents dgvFunc As DataGridView
     Friend WithEvents nome As DataGridViewTextBoxColumn
     Friend WithEvents cargo As DataGridViewTextBoxColumn
+    Friend WithEvents admissao As DataGridViewTextBoxColumn
+    Friend WithEvents CPF As DataGridViewTextBoxColumn
+    Friend WithEvents BRUTO As DataGridViewTextBoxColumn
+    Friend WithEvents INSS As DataGridViewTextBoxColumn
+    Friend WithEvents LIQUIDO As DataGridViewTextBoxColumn
+    Friend WithEvents EDITAR As DataGridViewImageColumn
+    Friend WithEvents DELETAR As DataGridViewImageColumn
+    Friend WithEvents btnSalvar As Button
 End Class
