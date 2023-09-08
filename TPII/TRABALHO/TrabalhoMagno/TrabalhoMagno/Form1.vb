@@ -221,4 +221,27 @@
         End With
 
     End Sub
+
+    Private Sub txtPesq_TextChanged(sender As Object, e As EventArgs) Handles txtPesq.TextChanged
+        Try
+            SQL = $"SELECT * FROM Tb_Funcionario WHERE nome LIKE '{txtPesq.Text}%'"
+            rs = db.Execute(SQL)
+
+            With dgvFunc
+                .Rows.Clear()
+                Do While rs.EOF = False
+                    .Rows.Add(rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(5).Value, rs.Fields(4).Value,
+                          rs.Fields(6).Value, rs.Fields(8).Value, rs.Fields(7).Value, Nothing, Nothing)
+                    rs.MoveNext()
+                    cont += 1
+                Loop
+
+            End With
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub txtNome_TextChanged(sender As Object, e As EventArgs) Handles txtNome.TextChanged
+        txtNome.Text = txtNome.Text.ToUpper()
+    End Sub
 End Class

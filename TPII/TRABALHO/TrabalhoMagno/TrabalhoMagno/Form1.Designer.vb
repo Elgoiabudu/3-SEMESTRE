@@ -37,6 +37,7 @@ Partial Class Form1
         DELETAR = New DataGridViewImageColumn()
         txtCpf = New MaskedTextBox()
         Label8 = New Label()
+        btnSalvar = New Button()
         GroupBox1 = New GroupBox()
         txtSalLiq = New TextBox()
         Label5 = New Label()
@@ -54,7 +55,8 @@ Partial Class Form1
         foto = New PictureBox()
         Label1 = New Label()
         tbcFunc = New TabControl()
-        btnSalvar = New Button()
+        txtPesq = New TextBox()
+        Label9 = New Label()
         TabPage1.SuspendLayout()
         CType(dgvFunc, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
@@ -68,6 +70,8 @@ Partial Class Form1
         ' 
         ' TabPage1
         ' 
+        TabPage1.Controls.Add(Label9)
+        TabPage1.Controls.Add(txtPesq)
         TabPage1.Controls.Add(dgvFunc)
         TabPage1.Controls.Add(txtCpf)
         TabPage1.Controls.Add(Label8)
@@ -190,6 +194,17 @@ Partial Class Form1
         Label8.Size = New Size(28, 15)
         Label8.TabIndex = 12
         Label8.Text = "CPF"
+        ' 
+        ' btnSalvar
+        ' 
+        btnSalvar.BackColor = Color.Transparent
+        btnSalvar.BackgroundImage = CType(resources.GetObject("btnSalvar.BackgroundImage"), Image)
+        btnSalvar.BackgroundImageLayout = ImageLayout.Center
+        btnSalvar.Location = New Point(667, 21)
+        btnSalvar.Name = "btnSalvar"
+        btnSalvar.Size = New Size(66, 67)
+        btnSalvar.TabIndex = 10
+        btnSalvar.UseVisualStyleBackColor = False
         ' 
         ' GroupBox1
         ' 
@@ -342,16 +357,21 @@ Partial Class Form1
         tbcFunc.Size = New Size(1230, 632)
         tbcFunc.TabIndex = 0
         ' 
-        ' btnSalvar
+        ' txtPesq
         ' 
-        btnSalvar.BackColor = Color.Transparent
-        btnSalvar.BackgroundImage = CType(resources.GetObject("btnSalvar.BackgroundImage"), Image)
-        btnSalvar.BackgroundImageLayout = ImageLayout.Center
-        btnSalvar.Location = New Point(667, 21)
-        btnSalvar.Name = "btnSalvar"
-        btnSalvar.Size = New Size(66, 67)
-        btnSalvar.TabIndex = 10
-        btnSalvar.UseVisualStyleBackColor = False
+        txtPesq.Location = New Point(667, 168)
+        txtPesq.Name = "txtPesq"
+        txtPesq.Size = New Size(418, 23)
+        txtPesq.TabIndex = 14
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(667, 149)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(196, 15)
+        Label9.TabIndex = 16
+        Label9.Text = "DIGITE UM NOME PARA PESQUISAR"
         ' 
         ' Form1
         ' 
@@ -403,4 +423,6 @@ Partial Class Form1
     Friend WithEvents EDITAR As DataGridViewImageColumn
     Friend WithEvents DELETAR As DataGridViewImageColumn
     Friend WithEvents btnSalvar As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtPesq As TextBox
 End Class

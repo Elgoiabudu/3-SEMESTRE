@@ -64,7 +64,6 @@
                           rs.Fields(6).Value, rs.Fields(8).Value, rs.Fields(7).Value, Nothing, Nothing)
                 rs.MoveNext()
                 cont += 1
-
             Loop
 
         End With
