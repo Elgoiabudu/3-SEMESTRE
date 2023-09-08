@@ -17,33 +17,46 @@
             'QUERY inicial
             SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{txtCpf.Text}'"
             rs = db.Execute(SQL)
-            aux_id = rs.Fields(0).Value
 
             'verificando se existe algum registro no banco
             If rs.EOF = True Then
 
                 'caso não tenha, ele faz o insert.
-                SQL = $"INSERT INTO Tb_Funcionario (nome, cargo, caminhoFoto, CPF, dataAdmissao, salarioBruto, salarioLiquido, INSS)
-                    VALUES
-                    ('{txtNome.Text}', '{cbCargo.SelectedItem}', '{diretorio}', '{txtCpf.Text}', '{dataAdm.Value.Date}', {txtSalBruto.Text}, {txtSalLiq.Text}, {txtINSS.Text});"
+                SQL = $"INSERT INTO Tb_Funcionario 
+                        (nome, 
+                        cargo, 
+                        caminhoFoto, 
+                        CPF, 
+                        dataAdmissao, 
+                        salarioBruto, 
+                        salarioLiquido, 
+                        INSS)
+                        VALUES
+                        ('{txtNome.Text}', 
+                         '{cbCargo.SelectedItem}', 
+                         '{diretorio}', 
+                         '{txtCpf.Text}', 
+                         '{dataAdm.Value.Date}', 
+                          {txtSalBruto.Text}, 
+                          {txtSalLiq.Text}, 
+                          {txtINSS.Text});"
                 rs = db.Execute(SQL)
                 MsgBox("DADOS GRAVADOS COM SUCESSO!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "SUCESSO")
                 Limpar()
-
             Else
 
-                'caso exista, faz o update
+                'caso exista, faz o update levando em conta a ID
                 SQL = $"UPDATE Tb_Funcionario SET
-                        nome='{txtNome.Text}',
-                        cargo ='{cbCargo.SelectedItem}',
-                        caminhoFoto='{diretorio}',
-                        dataAdmissao='{dataAdm.Value.Date}',
-                        salarioBruto='{txtSalBruto.Text}',
-                        salarioLiquido='{txtSalLiq.Text}',
-                        INSS='{txtINSS.Text}',
-                        CPF='{txtCpf.Text}'
-                        WHERE
-                        id={aux_id}"
+                nome ='{txtNome.Text}',
+                cargo ='{cbCargo.SelectedItem}',
+                caminhoFoto ='{diretorio}',
+                dataAdmissao ='{dataAdm.Value.Date}',
+                salarioBruto ='{txtSalBruto.Text}',
+                salarioLiquido ='{txtSalLiq.Text}',
+                INSS='{txtINSS.Text}',
+                cpf ='{txtCpf.Text}'
+                WHERE
+                id ={aux_id}"
                 rs = db.Execute(SQL)
                 MsgBox("DADOS ALTERADOS COM SUCESSO!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "SUCESSO")
                 Limpar()
@@ -74,7 +87,7 @@
         End Try
     End Sub
 
-    Private Sub txtQtdSal_KeyPress(sender As Object, e As EventArgs) Handles txtQtdSal.LostFocus
+    Private Sub txtQtdSal_LostFocus(sender As Object, e As EventArgs) Handles txtQtdSal.LostFocus
 
         'preenchendo o salario bruto, inss e salario liquido
         Try
@@ -108,6 +121,9 @@
 
         'preenchendo a combo box com os cargos
         CarregarTipo()
+
+        FillDgv()
+
     End Sub
 
     Private Sub txtQtdSal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQtdSal.KeyPress
@@ -125,35 +141,35 @@
 
         'caso exista algum registro já cadastrado, faz o preenchimento dos campos no form de cadastro
         Try
+
             SQL = $"SELECT * FROM Tb_Funcionario WHERE CPF='{txtCpf.Text}'"
             rs = db.Execute(SQL)
 
-            Dim qtdSal = rs.Fields(6).Value / 1320
+            If rs.EOF = False Then
+                Dim qtdSal = rs.Fields(6).Value / 1320
 
-            aux_id = rs.Fields(0).Value
-            txtNome.Text = rs.Fields(1).Value
-            cbCargo.Text = rs.Fields(2).Value
-            foto.Load(rs.Fields(3).Value)
-            diretorio = rs.Fields(3).Value
-            dataAdm.Value = rs.Fields(5).Value
-            txtQtdSal.Text = qtdSal
-            txtSalBruto.Text = Replace(rs.Fields(6).Value, ",", ".")
-            txtSalLiq.Text = Replace(rs.Fields(7).Value, ",", ".")
-            txtINSS.Text = Replace(rs.Fields(8).Value, ",", ".")
-
-
+                txtNome.Text = rs.Fields(1).Value
+                cbCargo.Text = rs.Fields(2).Value
+                foto.Load(rs.Fields(3).Value)
+                diretorio = rs.Fields(3).Value
+                dataAdm.Value = rs.Fields(5).Value
+                txtQtdSal.Text = qtdSal
+                txtSalBruto.Text = Replace(rs.Fields(6).Value, ",", ".")
+                txtSalLiq.Text = Replace(rs.Fields(7).Value, ",", ".")
+                txtINSS.Text = Replace(rs.Fields(8).Value, ",", ".")
+            Else
+                'caso não exista registro com o cpf digitado, limpa os campo ou não faz nada.
+                txtNome.Text = ""
+                txtQtdSal.Text = ""
+                txtQtdSal.Text = ""
+                txtSalBruto.Text = ""
+                txtSalLiq.Text = ""
+                txtINSS.Text = ""
+                dataAdm.Value = Now()
+                foto.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\net6.0-windows\", "\FOTOS\new_user.jpg"))
+                diretorio = ""
+            End If
         Catch ex As Exception
-
-            'caso não exista registro com o cpf digitado, limpa os campo ou não faz nada.
-            txtNome.Text = ""
-            txtQtdSal.Text = ""
-            txtQtdSal.Text = ""
-            txtSalBruto.Text = ""
-            txtSalLiq.Text = ""
-            txtINSS.Text = ""
-            dataAdm.Value = Now()
-            foto.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\net6.0-windows\", "\FOTOS\new_user.jpg"))
-            diretorio = ""
 
         End Try
 

@@ -51,4 +51,11 @@
         End Try
     End Sub
 
+    Sub FillDgv()
+        SQL = $"SELECT * FROM Tb_Funcionario"
+        rs = db.Execute(SQL)
+
+
+    End Sub
+
 End Module

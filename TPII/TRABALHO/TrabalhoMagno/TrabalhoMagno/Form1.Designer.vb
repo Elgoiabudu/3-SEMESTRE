@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
-        tbcFunc = New TabControl()
+        OpenFileDialog1 = New OpenFileDialog()
         TabPage1 = New TabPage()
         txtCpf = New MaskedTextBox()
         Label8 = New Label()
@@ -36,62 +36,49 @@ Partial Class Form1
         txtINSS = New TextBox()
         Label6 = New Label()
         txtQtdSal = New TextBox()
+        txtNome = New TextBox()
         Label4 = New Label()
         Label3 = New Label()
         dataAdm = New DateTimePicker()
         cbCargo = New ComboBox()
         Label2 = New Label()
         foto = New PictureBox()
-        txtNome = New TextBox()
         Label1 = New Label()
-        TabPage2 = New TabPage()
+        tbcFunc = New TabControl()
         dgvFunc = New DataGridView()
-        numero = New DataGridViewTextBoxColumn()
         nome = New DataGridViewTextBoxColumn()
         cargo = New DataGridViewTextBoxColumn()
-        bruto = New DataGridViewTextBoxColumn()
-        inss = New DataGridViewTextBoxColumn()
-        liquido = New DataGridViewTextBoxColumn()
-        acao = New DataGridViewTextBoxColumn()
-        TextBox6 = New TextBox()
-        OpenFileDialog1 = New OpenFileDialog()
-        tbcFunc.SuspendLayout()
         TabPage1.SuspendLayout()
         GroupBox1.SuspendLayout()
         CType(foto, ComponentModel.ISupportInitialize).BeginInit()
-        TabPage2.SuspendLayout()
+        tbcFunc.SuspendLayout()
         CType(dgvFunc, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' tbcFunc
+        ' OpenFileDialog1
         ' 
-        tbcFunc.Controls.Add(TabPage1)
-        tbcFunc.Controls.Add(TabPage2)
-        tbcFunc.Location = New Point(5, 4)
-        tbcFunc.Name = "tbcFunc"
-        tbcFunc.SelectedIndex = 0
-        tbcFunc.Size = New Size(675, 606)
-        tbcFunc.TabIndex = 0
+        OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
         ' TabPage1
         ' 
+        TabPage1.Controls.Add(dgvFunc)
         TabPage1.Controls.Add(txtCpf)
         TabPage1.Controls.Add(Label8)
         TabPage1.Controls.Add(btnSalvar)
         TabPage1.Controls.Add(GroupBox1)
         TabPage1.Controls.Add(txtQtdSal)
+        TabPage1.Controls.Add(txtNome)
         TabPage1.Controls.Add(Label4)
         TabPage1.Controls.Add(Label3)
         TabPage1.Controls.Add(dataAdm)
         TabPage1.Controls.Add(cbCargo)
         TabPage1.Controls.Add(Label2)
         TabPage1.Controls.Add(foto)
-        TabPage1.Controls.Add(txtNome)
         TabPage1.Controls.Add(Label1)
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(667, 578)
+        TabPage1.Size = New Size(1222, 604)
         TabPage1.TabIndex = 0
         TabPage1.Text = "DADOS DOS FUNCIONÁRIOS"
         TabPage1.UseVisualStyleBackColor = True
@@ -115,7 +102,7 @@ Partial Class Form1
         ' 
         ' btnSalvar
         ' 
-        btnSalvar.Location = New Point(261, 214)
+        btnSalvar.Location = New Point(667, 21)
         btnSalvar.Name = "btnSalvar"
         btnSalvar.Size = New Size(134, 43)
         btnSalvar.TabIndex = 10
@@ -195,6 +182,13 @@ Partial Class Form1
         txtQtdSal.Size = New Size(150, 23)
         txtQtdSal.TabIndex = 8
         ' 
+        ' txtNome
+        ' 
+        txtNome.Location = New Point(154, 21)
+        txtNome.Name = "txtNome"
+        txtNome.Size = New Size(366, 23)
+        txtNome.TabIndex = 2
+        ' 
         ' Label4
         ' 
         Label4.AutoSize = True
@@ -248,13 +242,6 @@ Partial Class Form1
         foto.TabIndex = 2
         foto.TabStop = False
         ' 
-        ' txtNome
-        ' 
-        txtNome.Location = New Point(154, 21)
-        txtNome.Name = "txtNome"
-        txtNome.Size = New Size(366, 23)
-        txtNome.TabIndex = 2
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -264,37 +251,32 @@ Partial Class Form1
         Label1.TabIndex = 0
         Label1.Text = "NOME DO FUNCIONÁRIO"
         ' 
-        ' TabPage2
+        ' tbcFunc
         ' 
-        TabPage2.Controls.Add(dgvFunc)
-        TabPage2.Controls.Add(TextBox6)
-        TabPage2.Location = New Point(4, 24)
-        TabPage2.Name = "TabPage2"
-        TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(667, 578)
-        TabPage2.TabIndex = 1
-        TabPage2.Text = "LISTAGEM DE FUNCIONÁRIOS"
-        TabPage2.UseVisualStyleBackColor = True
+        tbcFunc.Controls.Add(TabPage1)
+        tbcFunc.Location = New Point(5, 14)
+        tbcFunc.Name = "tbcFunc"
+        tbcFunc.SelectedIndex = 0
+        tbcFunc.Size = New Size(1230, 632)
+        tbcFunc.TabIndex = 0
         ' 
         ' dgvFunc
         ' 
-        dgvFunc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        dgvFunc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        dgvFunc.Columns.AddRange(New DataGridViewColumn() {numero, nome, cargo, bruto, inss, liquido, acao})
-        dgvFunc.Location = New Point(6, 35)
+        dgvFunc.AllowUserToAddRows = False
+        dgvFunc.AllowUserToDeleteRows = False
+        dgvFunc.AllowUserToResizeColumns = False
+        dgvFunc.AllowUserToResizeRows = False
+        dgvFunc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvFunc.Columns.AddRange(New DataGridViewColumn() {nome, cargo})
+        dgvFunc.Location = New Point(6, 197)
         dgvFunc.Name = "dgvFunc"
         dgvFunc.RowTemplate.Height = 25
-        dgvFunc.Size = New Size(655, 537)
-        dgvFunc.TabIndex = 1
-        ' 
-        ' numero
-        ' 
-        numero.HeaderText = "Nº"
-        numero.Name = "numero"
+        dgvFunc.Size = New Size(795, 150)
+        dgvFunc.TabIndex = 13
         ' 
         ' nome
         ' 
-        nome.HeaderText = "NOME DO FUNCIONÁRIO"
+        nome.HeaderText = "NOME"
         nome.Name = "nome"
         ' 
         ' cargo
@@ -302,69 +284,28 @@ Partial Class Form1
         cargo.HeaderText = "CARGO"
         cargo.Name = "cargo"
         ' 
-        ' bruto
-        ' 
-        bruto.HeaderText = "SALÁRIO BRUTO"
-        bruto.Name = "bruto"
-        ' 
-        ' inss
-        ' 
-        inss.HeaderText = "INSS"
-        inss.Name = "inss"
-        ' 
-        ' liquido
-        ' 
-        liquido.HeaderText = "SALÁRIO LÍQUIDO"
-        liquido.Name = "liquido"
-        ' 
-        ' acao
-        ' 
-        acao.HeaderText = "AÇÕES"
-        acao.Name = "acao"
-        ' 
-        ' TextBox6
-        ' 
-        TextBox6.Location = New Point(6, 6)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(285, 23)
-        TextBox6.TabIndex = 0
-        ' 
-        ' OpenFileDialog1
-        ' 
-        OpenFileDialog1.FileName = "OpenFileDialog1"
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(684, 613)
+        ClientSize = New Size(1236, 651)
         Controls.Add(tbcFunc)
         Name = "Form1"
         Text = "CADASTRO DE FUNCINÁRIOS"
-        tbcFunc.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         CType(foto, ComponentModel.ISupportInitialize).EndInit()
-        TabPage2.ResumeLayout(False)
-        TabPage2.PerformLayout()
+        tbcFunc.ResumeLayout(False)
         CType(dgvFunc, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents tbcFunc As TabControl
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents txtQtdSal As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents dataAdm As DateTimePicker
-    Friend WithEvents cbCargo As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents foto As PictureBox
-    Friend WithEvents txtNome As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents txtCpf As MaskedTextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents btnSalvar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtSalLiq As TextBox
     Friend WithEvents Label5 As Label
@@ -372,17 +313,17 @@ Partial Class Form1
     Friend WithEvents txtSalBruto As TextBox
     Friend WithEvents txtINSS As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents txtQtdSal As TextBox
+    Friend WithEvents txtNome As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents dataAdm As DateTimePicker
+    Friend WithEvents cbCargo As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents foto As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents tbcFunc As TabControl
     Friend WithEvents dgvFunc As DataGridView
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents numero As DataGridViewTextBoxColumn
     Friend WithEvents nome As DataGridViewTextBoxColumn
     Friend WithEvents cargo As DataGridViewTextBoxColumn
-    Friend WithEvents bruto As DataGridViewTextBoxColumn
-    Friend WithEvents inss As DataGridViewTextBoxColumn
-    Friend WithEvents liquido As DataGridViewTextBoxColumn
-    Friend WithEvents acao As DataGridViewTextBoxColumn
-    Friend WithEvents btnSalvar As Button
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents txtCpf As MaskedTextBox
-    Friend WithEvents Label8 As Label
 End Class
