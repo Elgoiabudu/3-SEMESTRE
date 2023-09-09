@@ -401,11 +401,13 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1236, 651)
         Controls.Add(tbcFunc)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "CADASTRO DE FUNCINÁRIOS"
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
