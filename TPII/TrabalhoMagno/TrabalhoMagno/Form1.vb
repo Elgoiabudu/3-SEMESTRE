@@ -1,6 +1,7 @@
 ﻿Public Class Form1
 
     Private Sub Limpar()
+
         'Sub limpar para ser reaproveitada
         txtCpf.Text = ""
         txtNome.Text = ""
@@ -11,6 +12,7 @@
         txtINSS.Text = ""
         dataAdm.Value = Now()
         foto.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\net6.0-windows\", "\FOTOS\new_user.jpg"))
+        txtCpf.Focus()
     End Sub
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
         Try
@@ -251,5 +253,9 @@
         'nome sempre em maiúscula
         txtNome.Text = txtNome.Text.ToUpper()
         txtNome.SelectionStart = txtNome.Text.Length
+    End Sub
+
+    Private Sub btnLimpar_Click(sender As Object, e As EventArgs) Handles btnLimpar.Click
+        Limpar()
     End Sub
 End Class

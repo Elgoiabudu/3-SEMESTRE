@@ -25,6 +25,7 @@ Partial Class Form1
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         OpenFileDialog1 = New OpenFileDialog()
         TabPage1 = New TabPage()
+        btnLimpar = New Button()
         Label9 = New Label()
         txtPesq = New TextBox()
         dgvFunc = New DataGridView()
@@ -70,6 +71,7 @@ Partial Class Form1
         ' 
         ' TabPage1
         ' 
+        TabPage1.Controls.Add(btnLimpar)
         TabPage1.Controls.Add(Label9)
         TabPage1.Controls.Add(txtPesq)
         TabPage1.Controls.Add(dgvFunc)
@@ -93,6 +95,17 @@ Partial Class Form1
         TabPage1.TabIndex = 0
         TabPage1.Text = "DADOS DOS FUNCIONÁRIOS"
         TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' btnLimpar
+        ' 
+        btnLimpar.BackColor = Color.Transparent
+        btnLimpar.BackgroundImage = CType(resources.GetObject("btnLimpar.BackgroundImage"), Image)
+        btnLimpar.BackgroundImageLayout = ImageLayout.Center
+        btnLimpar.Location = New Point(763, 21)
+        btnLimpar.Name = "btnLimpar"
+        btnLimpar.Size = New Size(85, 82)
+        btnLimpar.TabIndex = 17
+        btnLimpar.UseVisualStyleBackColor = False
         ' 
         ' Label9
         ' 
@@ -218,7 +231,7 @@ Partial Class Form1
         btnSalvar.BackgroundImageLayout = ImageLayout.Center
         btnSalvar.Location = New Point(667, 21)
         btnSalvar.Name = "btnSalvar"
-        btnSalvar.Size = New Size(66, 67)
+        btnSalvar.Size = New Size(90, 82)
         btnSalvar.TabIndex = 10
         btnSalvar.UseVisualStyleBackColor = False
         ' 
@@ -426,4 +439,5 @@ Partial Class Form1
     Friend WithEvents btnSalvar As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents txtPesq As TextBox
+    Friend WithEvents btnLimpar As Button
 End Class

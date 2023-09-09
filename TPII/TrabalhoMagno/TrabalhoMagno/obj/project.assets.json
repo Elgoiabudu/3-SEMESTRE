@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fernando B. Leonelli\\Desktop\\3-SEMESTRE\\TPII\\TRABALHO\\TrabalhoMagno\\TrabalhoMagno\\TrabalhoMagno.vbproj",
+      "projectUniqueName": "C:\\Users\\Fernando B. Leonelli\\Desktop\\3-SEMESTRE\\TPII\\TrabalhoMagno\\TrabalhoMagno\\TrabalhoMagno.vbproj",
       "projectName": "TrabalhoMagno",
-      "projectPath": "C:\\Users\\Fernando B. Leonelli\\Desktop\\3-SEMESTRE\\TPII\\TRABALHO\\TrabalhoMagno\\TrabalhoMagno\\TrabalhoMagno.vbproj",
+      "projectPath": "C:\\Users\\Fernando B. Leonelli\\Desktop\\3-SEMESTRE\\TPII\\TrabalhoMagno\\TrabalhoMagno\\TrabalhoMagno.vbproj",
       "packagesPath": "C:\\Users\\Fernando B. Leonelli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fernando B. Leonelli\\Desktop\\3-SEMESTRE\\TPII\\TRABALHO\\TrabalhoMagno\\TrabalhoMagno\\obj\\",
+      "outputPath": "C:\\Users\\Fernando B. Leonelli\\Desktop\\3-SEMESTRE\\TPII\\TrabalhoMagno\\TrabalhoMagno\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Fernando B. Leonelli\\AppData\\Roaming\\NuGet\\NuGet.Config",
