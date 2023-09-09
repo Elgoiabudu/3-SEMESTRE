@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         OpenFileDialog1 = New OpenFileDialog()
         TabPage1 = New TabPage()
         btnLimpar = New Button()
@@ -125,14 +126,24 @@ Partial Class Form1
         ' 
         ' dgvFunc
         ' 
+        dgvFunc.AllowDrop = True
         dgvFunc.AllowUserToAddRows = False
         dgvFunc.AllowUserToDeleteRows = False
         dgvFunc.AllowUserToResizeColumns = False
         dgvFunc.AllowUserToResizeRows = False
         dgvFunc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvFunc.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        dgvFunc.BackgroundColor = SystemColors.ButtonHighlight
         dgvFunc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvFunc.Columns.AddRange(New DataGridViewColumn() {nome, cargo, admissao, CPF, BRUTO, INSS, LIQUIDO, EDITAR, DELETAR})
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvFunc.DefaultCellStyle = DataGridViewCellStyle1
         dgvFunc.GridColor = SystemColors.ButtonFace
         dgvFunc.Location = New Point(6, 197)
         dgvFunc.Name = "dgvFunc"
