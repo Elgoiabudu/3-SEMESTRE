@@ -95,6 +95,7 @@ Partial Class cadCateg
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "cadCateg"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "CADASTRO DE CATEGORIAS"
         ResumeLayout(False)
         PerformLayout()

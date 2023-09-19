@@ -345,6 +345,7 @@ Partial Class cadCli
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "cadCli"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "CADASTRO DE CLIENTES"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

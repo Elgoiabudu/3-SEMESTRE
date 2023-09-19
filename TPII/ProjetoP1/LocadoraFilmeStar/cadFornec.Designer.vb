@@ -258,6 +258,7 @@ Partial Class cadFornec
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "cadFornec"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "CADASTRO DE FORNECEDORES"
         ResumeLayout(False)
         PerformLayout()
