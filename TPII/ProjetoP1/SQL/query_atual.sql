@@ -86,3 +86,62 @@ values
 SELECT * FROM tbCateg
 
 SELECT * FROM tbClientes
+
+INSERT INTO tbClientes
+                (nome,
+                sobrenome,
+                email,
+                cpf,
+                rg,
+                telefoneCel,
+                telefoneFixo,
+                endereco,
+                cidade,
+                estado,
+                cep,
+                foto)
+                VALUES
+                ('{txtNome.Text}',
+                '{txtSobrenome.Text}',
+                '{txtEmail.Text}',
+                '{txtCPF.Text}',
+                '{txtRG.Text}',
+                '{txtCelular.Text}',
+                '{txtFixo.Text}',
+                '{txtEndereco.Text}',
+                '{txtCidade.Text}',
+                '{diretorio}')
+
+
+				INSERT INTO tbClientes
+                (nome,
+                sobrenome,
+                email,
+                cpf,
+                rg,
+                telefoneCel,
+                telefoneFixo,
+                endereco,
+                cidade,
+                estado,
+                cep,
+                foto)
+                VALUES
+                ('{txtNome.Text}',
+                '{txtSobrenome.Text}',
+                '{txtEmail.Text}',
+                '{txtCPF.Text}',
+                '{txtRG.Text}',
+                '{111111111}',
+                '{111111111}',
+                '{txtEndereco.Text}',
+                '{txtCidade.Text}',
+                '{txtEstado.Text}',
+                '{txt}',
+                '{diretorio}')
+
+
+
+delete from tbClientes where id = 1006
+
+select * from tbClientes

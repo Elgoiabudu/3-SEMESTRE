@@ -29,3 +29,34 @@ C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeSta
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\Interop.ADODB.dll
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.ResolveComReference.cache
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.pesqCli.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\LocadoraFilmeStar.exe
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\LocadoraFilmeStar.deps.json
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\LocadoraFilmeStar.runtimeconfig.json
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\LocadoraFilmeStar.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\LocadoraFilmeStar.pdb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.AssemblyReference.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\Interop.ADODB.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.ResolveComReference.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadCateg.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadCli.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadFornec.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.Form1.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.Resources.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.pesqCli.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.GenerateResource.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.AssemblyInfoInputs.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.AssemblyInfo.vb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.CoreCompileInputs.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.vbproj.CopyComplete
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\refint\LocadoraFilmeStar.dll
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.pdb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.genruntimeconfig.cache
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\ref\LocadoraFilmeStar.dll

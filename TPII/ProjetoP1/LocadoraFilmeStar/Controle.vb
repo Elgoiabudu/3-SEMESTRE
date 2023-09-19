@@ -8,10 +8,25 @@
 
     End Sub
 
+    Sub Limpar()
+        cadCli.txtNome.Text = ""
+        cadCli.txtSobrenome.Text = ""
+        cadCli.txtEmail.Text = ""
+        cadCli.maskCPF.Text = ""
+        cadCli.maskCel.Text = ""
+        cadCli.maskRG.Text = ""
+        cadCli.maskFixo.Text = ""
+        cadCli.txtEndereco.Text = ""
+        cadCli.txtCidade.Text = ""
+        cadCli.txtEstado.Text = ""
+        cadCli.txtCEP.Text = ""
+        diretorio = ""
+    End Sub
+
     Sub ConectarBanco()
         Try
             db = CreateObject("ADODB.Connection")
-            db.Open("Provider=SQLOLEDB;Data Source=DESKTOP-J8VD9D7;Initial Catalog=filmeStar;trusted_connection=yes;")
+            db.Open("Provider=SQLOLEDB;Data Source=LAB5-12;Initial Catalog=filmeStar;trusted_connection=yes;")
         Catch ex As Exception
             MsgBox("ERRO | Impossível se conectar ao banco de dados!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try

@@ -33,13 +33,9 @@ Partial Class cadCli
         Label4 = New Label()
         txtEmail = New TextBox()
         Label5 = New Label()
-        txtRG = New TextBox()
         Label6 = New Label()
-        txtCPF = New TextBox()
         Label7 = New Label()
-        txtFixo = New TextBox()
         Label8 = New Label()
-        txtCelular = New TextBox()
         Label9 = New Label()
         txtEndereco = New TextBox()
         Label10 = New Label()
@@ -51,11 +47,17 @@ Partial Class cadCli
         btnSalvar = New Button()
         btnLimpar = New Button()
         btnCancelar = New Button()
+        OpenFileDialog1 = New OpenFileDialog()
+        maskCPF = New MaskedTextBox()
+        maskRG = New MaskedTextBox()
+        maskFixo = New MaskedTextBox()
+        maskCel = New MaskedTextBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' txtNome
         ' 
+        txtNome.CharacterCasing = CharacterCasing.Upper
         txtNome.Location = New Point(12, 71)
         txtNome.Name = "txtNome"
         txtNome.Size = New Size(144, 23)
@@ -81,18 +83,20 @@ Partial Class cadCli
         ' 
         ' txtSobrenome
         ' 
+        txtSobrenome.CharacterCasing = CharacterCasing.Upper
         txtSobrenome.Location = New Point(176, 71)
         txtSobrenome.Name = "txtSobrenome"
         txtSobrenome.Size = New Size(144, 23)
-        txtSobrenome.TabIndex = 2
+        txtSobrenome.TabIndex = 1
         ' 
         ' PictureBox1
         ' 
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
-        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(326, 9)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(100, 129)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
         ' 
@@ -124,10 +128,11 @@ Partial Class cadCli
         ' 
         ' txtEmail
         ' 
+        txtEmail.CharacterCasing = CharacterCasing.Upper
         txtEmail.Location = New Point(12, 159)
         txtEmail.Name = "txtEmail"
         txtEmail.Size = New Size(414, 23)
-        txtEmail.TabIndex = 11
+        txtEmail.TabIndex = 4
         ' 
         ' Label5
         ' 
@@ -138,13 +143,6 @@ Partial Class cadCli
         Label5.TabIndex = 14
         Label5.Text = "RG"
         ' 
-        ' txtRG
-        ' 
-        txtRG.Location = New Point(12, 115)
-        txtRG.Name = "txtRG"
-        txtRG.Size = New Size(144, 23)
-        txtRG.TabIndex = 13
-        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -153,13 +151,6 @@ Partial Class cadCli
         Label6.Size = New Size(28, 15)
         Label6.TabIndex = 16
         Label6.Text = "CPF"
-        ' 
-        ' txtCPF
-        ' 
-        txtCPF.Location = New Point(176, 115)
-        txtCPF.Name = "txtCPF"
-        txtCPF.Size = New Size(144, 23)
-        txtCPF.TabIndex = 15
         ' 
         ' Label7
         ' 
@@ -170,13 +161,6 @@ Partial Class cadCli
         Label7.TabIndex = 18
         Label7.Text = "TELEFONE FIXO"
         ' 
-        ' txtFixo
-        ' 
-        txtFixo.Location = New Point(12, 203)
-        txtFixo.Name = "txtFixo"
-        txtFixo.Size = New Size(144, 23)
-        txtFixo.TabIndex = 17
-        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -185,13 +169,6 @@ Partial Class cadCli
         Label8.Size = New Size(113, 15)
         Label8.TabIndex = 20
         Label8.Text = "TELEFONE CELULAR"
-        ' 
-        ' txtCelular
-        ' 
-        txtCelular.Location = New Point(176, 203)
-        txtCelular.Name = "txtCelular"
-        txtCelular.Size = New Size(144, 23)
-        txtCelular.TabIndex = 19
         ' 
         ' Label9
         ' 
@@ -204,10 +181,11 @@ Partial Class cadCli
         ' 
         ' txtEndereco
         ' 
+        txtEndereco.CharacterCasing = CharacterCasing.Upper
         txtEndereco.Location = New Point(12, 247)
         txtEndereco.Name = "txtEndereco"
         txtEndereco.Size = New Size(241, 23)
-        txtEndereco.TabIndex = 21
+        txtEndereco.TabIndex = 7
         ' 
         ' Label10
         ' 
@@ -220,10 +198,11 @@ Partial Class cadCli
         ' 
         ' txtCidade
         ' 
+        txtCidade.CharacterCasing = CharacterCasing.Upper
         txtCidade.Location = New Point(261, 247)
         txtCidade.Name = "txtCidade"
         txtCidade.Size = New Size(165, 23)
-        txtCidade.TabIndex = 23
+        txtCidade.TabIndex = 8
         ' 
         ' Label11
         ' 
@@ -236,10 +215,11 @@ Partial Class cadCli
         ' 
         ' txtEstado
         ' 
+        txtEstado.CharacterCasing = CharacterCasing.Upper
         txtEstado.Location = New Point(12, 291)
         txtEstado.Name = "txtEstado"
         txtEstado.Size = New Size(144, 23)
-        txtEstado.TabIndex = 25
+        txtEstado.TabIndex = 9
         ' 
         ' Label12
         ' 
@@ -255,7 +235,7 @@ Partial Class cadCli
         txtCEP.Location = New Point(176, 291)
         txtCEP.Name = "txtCEP"
         txtCEP.Size = New Size(144, 23)
-        txtCEP.TabIndex = 27
+        txtCEP.TabIndex = 10
         ' 
         ' btnSalvar
         ' 
@@ -264,7 +244,7 @@ Partial Class cadCli
         btnSalvar.Location = New Point(12, 320)
         btnSalvar.Name = "btnSalvar"
         btnSalvar.Size = New Size(110, 41)
-        btnSalvar.TabIndex = 29
+        btnSalvar.TabIndex = 11
         btnSalvar.Text = "SALVAR"
         btnSalvar.TextAlign = ContentAlignment.MiddleRight
         btnSalvar.UseVisualStyleBackColor = True
@@ -276,7 +256,7 @@ Partial Class cadCli
         btnLimpar.Location = New Point(165, 320)
         btnLimpar.Name = "btnLimpar"
         btnLimpar.Size = New Size(110, 41)
-        btnLimpar.TabIndex = 30
+        btnLimpar.TabIndex = 12
         btnLimpar.Text = "LIMPAR"
         btnLimpar.TextAlign = ContentAlignment.MiddleRight
         btnLimpar.UseVisualStyleBackColor = True
@@ -288,16 +268,56 @@ Partial Class cadCli
         btnCancelar.Location = New Point(316, 320)
         btnCancelar.Name = "btnCancelar"
         btnCancelar.Size = New Size(110, 41)
-        btnCancelar.TabIndex = 31
+        btnCancelar.TabIndex = 13
         btnCancelar.Text = "CANCELAR"
         btnCancelar.TextAlign = ContentAlignment.MiddleRight
         btnCancelar.UseVisualStyleBackColor = True
+        ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
+        ' maskCPF
+        ' 
+        maskCPF.Location = New Point(175, 115)
+        maskCPF.Mask = "000,000,000-00"
+        maskCPF.Name = "maskCPF"
+        maskCPF.Size = New Size(145, 23)
+        maskCPF.TabIndex = 3
+        ' 
+        ' maskRG
+        ' 
+        maskRG.Location = New Point(12, 115)
+        maskRG.Mask = "00000000-0"
+        maskRG.Name = "maskRG"
+        maskRG.Size = New Size(144, 23)
+        maskRG.TabIndex = 2
+        ' 
+        ' maskFixo
+        ' 
+        maskFixo.Location = New Point(12, 203)
+        maskFixo.Mask = "(00)0000-0000"
+        maskFixo.Name = "maskFixo"
+        maskFixo.Size = New Size(144, 23)
+        maskFixo.TabIndex = 5
+        ' 
+        ' maskCel
+        ' 
+        maskCel.Location = New Point(176, 203)
+        maskCel.Mask = "(00)00000-0000"
+        maskCel.Name = "maskCel"
+        maskCel.Size = New Size(144, 23)
+        maskCel.TabIndex = 6
         ' 
         ' cadCli
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(437, 372)
+        ClientSize = New Size(437, 370)
+        Controls.Add(maskCel)
+        Controls.Add(maskFixo)
+        Controls.Add(maskRG)
+        Controls.Add(maskCPF)
         Controls.Add(btnCancelar)
         Controls.Add(btnLimpar)
         Controls.Add(btnSalvar)
@@ -310,13 +330,9 @@ Partial Class cadCli
         Controls.Add(Label9)
         Controls.Add(txtEndereco)
         Controls.Add(Label8)
-        Controls.Add(txtCelular)
         Controls.Add(Label7)
-        Controls.Add(txtFixo)
         Controls.Add(Label6)
-        Controls.Add(txtCPF)
         Controls.Add(Label5)
-        Controls.Add(txtRG)
         Controls.Add(Label4)
         Controls.Add(txtEmail)
         Controls.Add(Label3)
@@ -345,13 +361,9 @@ Partial Class cadCli
     Friend WithEvents Label4 As Label
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtRG As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtCPF As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtFixo As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtCelular As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents txtEndereco As TextBox
     Friend WithEvents Label10 As Label
@@ -363,4 +375,9 @@ Partial Class cadCli
     Friend WithEvents btnSalvar As Button
     Friend WithEvents btnLimpar As Button
     Friend WithEvents btnCancelar As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents maskCPF As MaskedTextBox
+    Friend WithEvents maskRG As MaskedTextBox
+    Friend WithEvents maskFixo As MaskedTextBox
+    Friend WithEvents maskCel As MaskedTextBox
 End Class
