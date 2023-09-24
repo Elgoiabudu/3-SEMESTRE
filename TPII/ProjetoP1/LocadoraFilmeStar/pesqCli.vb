@@ -55,7 +55,6 @@
                         Dim resp = MsgBox($"Deseja excluir {rs.Fields(1).Value} " + $"{rs.Fields(2).Value} da base de dados?",
                                           MsgBoxStyle.Question + MsgBoxStyle.YesNo, "ATENÇÃO!")
                         If resp = MsgBoxResult.Yes Then
-                            'MsgBox($"{rs.Fields(4).Value}")
                             SQL = $"delete from tbClientes where CPF='{aux_cpf}'"
                             rs = db.Execute(SQL)
                             LimparTudo()
