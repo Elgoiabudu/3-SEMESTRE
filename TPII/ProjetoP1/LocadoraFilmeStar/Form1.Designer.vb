@@ -33,7 +33,6 @@ Partial Class Form1
         ConsultasToolStripMenuItem = New ToolStripMenuItem()
         ClientesToolStripMenuItem = New ToolStripMenuItem()
         PedidosToolStripMenuItem = New ToolStripMenuItem()
-        FornecedoresToolStripMenuItem1 = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -90,7 +89,7 @@ Partial Class Form1
         ' 
         ' ConsultasToolStripMenuItem
         ' 
-        ConsultasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClientesToolStripMenuItem, PedidosToolStripMenuItem, FornecedoresToolStripMenuItem1})
+        ConsultasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClientesToolStripMenuItem, PedidosToolStripMenuItem})
         ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         ConsultasToolStripMenuItem.Size = New Size(71, 20)
         ConsultasToolStripMenuItem.Text = "Consultas"
@@ -99,22 +98,15 @@ Partial Class Form1
         ' 
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         ClientesToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F1
-        ClientesToolStripMenuItem.Size = New Size(191, 22)
+        ClientesToolStripMenuItem.Size = New Size(180, 22)
         ClientesToolStripMenuItem.Text = "Clientes"
         ' 
         ' PedidosToolStripMenuItem
         ' 
         PedidosToolStripMenuItem.Name = "PedidosToolStripMenuItem"
         PedidosToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F2
-        PedidosToolStripMenuItem.Size = New Size(191, 22)
+        PedidosToolStripMenuItem.Size = New Size(180, 22)
         PedidosToolStripMenuItem.Text = "Pedidos"
-        ' 
-        ' FornecedoresToolStripMenuItem1
-        ' 
-        FornecedoresToolStripMenuItem1.Name = "FornecedoresToolStripMenuItem1"
-        FornecedoresToolStripMenuItem1.ShortcutKeys = Keys.Control Or Keys.F3
-        FornecedoresToolStripMenuItem1.Size = New Size(191, 22)
-        FornecedoresToolStripMenuItem1.Text = "Fornecedores"
         ' 
         ' Form1
         ' 
@@ -144,6 +136,5 @@ Partial Class Form1
     Friend WithEvents ConsultasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PedidosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FornecedoresToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents CategoriasToolStripMenuItem As ToolStripMenuItem
 End Class

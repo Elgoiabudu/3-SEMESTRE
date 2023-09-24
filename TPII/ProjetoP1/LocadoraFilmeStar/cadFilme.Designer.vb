@@ -23,7 +23,6 @@ Partial Class cadFilme
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(cadFilme))
-        txtCod = New TextBox()
         Label1 = New Label()
         Label2 = New Label()
         txtNome = New TextBox()
@@ -42,16 +41,18 @@ Partial Class cadFilme
         btnLimpar = New Button()
         btnSalvar = New Button()
         OpenFileDialog1 = New OpenFileDialog()
+        dvgFilme = New DataGridView()
+        COD = New DataGridViewTextBoxColumn()
+        DESC = New DataGridViewTextBoxColumn()
+        VAL = New DataGridViewTextBoxColumn()
+        EDIT = New DataGridViewImageColumn()
+        DEL = New DataGridViewImageColumn()
+        Label8 = New Label()
+        TextBox1 = New TextBox()
+        txtCod = New TextBox()
         CType(capaFilme, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dvgFilme, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' txtCod
-        ' 
-        txtCod.Enabled = False
-        txtCod.Location = New Point(12, 27)
-        txtCod.Name = "txtCod"
-        txtCod.Size = New Size(134, 23)
-        txtCod.TabIndex = 0
         ' 
         ' Label1
         ' 
@@ -73,6 +74,7 @@ Partial Class cadFilme
         ' 
         ' txtNome
         ' 
+        txtNome.CharacterCasing = CharacterCasing.Upper
         txtNome.Location = New Point(12, 71)
         txtNome.Name = "txtNome"
         txtNome.Size = New Size(383, 23)
@@ -212,11 +214,93 @@ Partial Class cadFilme
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' dvgFilme
+        ' 
+        dvgFilme.AllowUserToAddRows = False
+        dvgFilme.AllowUserToDeleteRows = False
+        dvgFilme.AllowUserToResizeColumns = False
+        dvgFilme.AllowUserToResizeRows = False
+        dvgFilme.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        dvgFilme.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dvgFilme.Columns.AddRange(New DataGridViewColumn() {COD, DESC, VAL, EDIT, DEL})
+        dvgFilme.Location = New Point(683, 35)
+        dvgFilme.Name = "dvgFilme"
+        dvgFilme.ReadOnly = True
+        dvgFilme.RowHeadersWidth = 5
+        dvgFilme.RowTemplate.Height = 25
+        dvgFilme.Size = New Size(701, 447)
+        dvgFilme.TabIndex = 17
+        ' 
+        ' COD
+        ' 
+        COD.HeaderText = "CÓDIGO"
+        COD.Name = "COD"
+        COD.ReadOnly = True
+        COD.Width = 139
+        ' 
+        ' DESC
+        ' 
+        DESC.HeaderText = "DESCRIÇÃO"
+        DESC.Name = "DESC"
+        DESC.ReadOnly = True
+        DESC.Width = 139
+        ' 
+        ' VAL
+        ' 
+        VAL.HeaderText = "VALOR"
+        VAL.Name = "VAL"
+        VAL.ReadOnly = True
+        VAL.Width = 138
+        ' 
+        ' EDIT
+        ' 
+        EDIT.HeaderText = "EDITAR"
+        EDIT.Image = CType(resources.GetObject("EDIT.Image"), Image)
+        EDIT.Name = "EDIT"
+        EDIT.ReadOnly = True
+        EDIT.Width = 139
+        ' 
+        ' DEL
+        ' 
+        DEL.HeaderText = "DELETAR"
+        DEL.Image = CType(resources.GetObject("DEL.Image"), Image)
+        DEL.Name = "DEL"
+        DEL.ReadOnly = True
+        DEL.Width = 139
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(683, 9)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(105, 15)
+        Label8.TabIndex = 19
+        Label8.Text = "PESQUISAR FILME:"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(794, 6)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(383, 23)
+        TextBox1.TabIndex = 18
+        ' 
+        ' txtCod
+        ' 
+        txtCod.Location = New Point(12, 27)
+        txtCod.Name = "txtCod"
+        txtCod.ReadOnly = True
+        txtCod.Size = New Size(100, 23)
+        txtCod.TabIndex = 20
+        ' 
         ' cadFilme
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(683, 497)
+        ClientSize = New Size(1396, 497)
+        Controls.Add(txtCod)
+        Controls.Add(Label8)
+        Controls.Add(TextBox1)
+        Controls.Add(dvgFilme)
         Controls.Add(btnCancelar)
         Controls.Add(btnLimpar)
         Controls.Add(btnSalvar)
@@ -234,7 +318,6 @@ Partial Class cadFilme
         Controls.Add(Label2)
         Controls.Add(txtNome)
         Controls.Add(Label1)
-        Controls.Add(txtCod)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MinimizeBox = False
@@ -242,11 +325,10 @@ Partial Class cadFilme
         StartPosition = FormStartPosition.CenterScreen
         Text = "CADASTRO DE FILMES"
         CType(capaFilme, ComponentModel.ISupportInitialize).EndInit()
+        CType(dvgFilme, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents txtCod As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtNome As TextBox
@@ -265,4 +347,13 @@ Partial Class cadFilme
     Friend WithEvents btnLimpar As Button
     Friend WithEvents btnSalvar As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents dvgFilme As DataGridView
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents COD As DataGridViewTextBoxColumn
+    Friend WithEvents DESC As DataGridViewTextBoxColumn
+    Friend WithEvents VAL As DataGridViewTextBoxColumn
+    Friend WithEvents EDIT As DataGridViewImageColumn
+    Friend WithEvents DEL As DataGridViewImageColumn
+    Friend WithEvents txtCod As TextBox
 End Class

@@ -40,10 +40,18 @@ Partial Class cadFornec
         Label8 = New Label()
         txtEstadoFornec = New TextBox()
         Label9 = New Label()
-        txtSituFornec = New TextBox()
         btnCancelarFornec = New Button()
         btnLimparFornec = New Button()
         btnSalvarFornec = New Button()
+        dgvFornec = New DataGridView()
+        cod = New DataGridViewTextBoxColumn()
+        nome = New DataGridViewTextBoxColumn()
+        editar = New DataGridViewImageColumn()
+        excluir = New DataGridViewImageColumn()
+        cbSit = New ComboBox()
+        Label10 = New Label()
+        txtPesq = New TextBox()
+        CType(dgvFornec, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label3
@@ -184,15 +192,6 @@ Partial Class cadFornec
         Label9.TabIndex = 28
         Label9.Text = "SITUAÇÃO"
         ' 
-        ' txtSituFornec
-        ' 
-        txtSituFornec.Enabled = False
-        txtSituFornec.Location = New Point(341, 159)
-        txtSituFornec.Name = "txtSituFornec"
-        txtSituFornec.Size = New Size(144, 23)
-        txtSituFornec.TabIndex = 27
-        txtSituFornec.Text = "ATIVO"
-        ' 
         ' btnCancelarFornec
         ' 
         btnCancelarFornec.BackgroundImage = CType(resources.GetObject("btnCancelarFornec.BackgroundImage"), Image)
@@ -229,16 +228,93 @@ Partial Class cadFornec
         btnSalvarFornec.TextAlign = ContentAlignment.MiddleRight
         btnSalvarFornec.UseVisualStyleBackColor = True
         ' 
+        ' dgvFornec
+        ' 
+        dgvFornec.AllowUserToAddRows = False
+        dgvFornec.AllowUserToDeleteRows = False
+        dgvFornec.AllowUserToResizeColumns = False
+        dgvFornec.AllowUserToResizeRows = False
+        dgvFornec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvFornec.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvFornec.Columns.AddRange(New DataGridViewColumn() {cod, nome, editar, excluir})
+        dgvFornec.Location = New Point(12, 273)
+        dgvFornec.Name = "dgvFornec"
+        dgvFornec.ReadOnly = True
+        dgvFornec.RowHeadersWidth = 5
+        dgvFornec.RowTemplate.Height = 25
+        dgvFornec.ScrollBars = ScrollBars.Vertical
+        dgvFornec.Size = New Size(473, 355)
+        dgvFornec.TabIndex = 35
+        ' 
+        ' cod
+        ' 
+        cod.HeaderText = "CÓDIGO"
+        cod.Name = "cod"
+        cod.ReadOnly = True
+        ' 
+        ' nome
+        ' 
+        nome.HeaderText = "NOME"
+        nome.Name = "nome"
+        nome.ReadOnly = True
+        ' 
+        ' editar
+        ' 
+        editar.HeaderText = "EDITAR"
+        editar.Image = CType(resources.GetObject("editar.Image"), Image)
+        editar.Name = "editar"
+        editar.ReadOnly = True
+        editar.Resizable = DataGridViewTriState.True
+        editar.SortMode = DataGridViewColumnSortMode.Automatic
+        ' 
+        ' excluir
+        ' 
+        excluir.HeaderText = "EXCLUIR"
+        excluir.Image = CType(resources.GetObject("excluir.Image"), Image)
+        excluir.Name = "excluir"
+        excluir.ReadOnly = True
+        excluir.Resizable = DataGridViewTriState.True
+        excluir.SortMode = DataGridViewColumnSortMode.Automatic
+        ' 
+        ' cbSit
+        ' 
+        cbSit.FormattingEnabled = True
+        cbSit.Items.AddRange(New Object() {"ATIVO", "INATIVO"})
+        cbSit.Location = New Point(341, 159)
+        cbSit.Name = "cbSit"
+        cbSit.Size = New Size(141, 23)
+        cbSit.TabIndex = 36
+        cbSit.Text = "ATIVO"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Location = New Point(12, 249)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(102, 15)
+        Label10.TabIndex = 38
+        Label10.Text = "PESQUISAR FILME"
+        ' 
+        ' txtPesq
+        ' 
+        txtPesq.Location = New Point(120, 244)
+        txtPesq.Name = "txtPesq"
+        txtPesq.Size = New Size(178, 23)
+        txtPesq.TabIndex = 37
+        ' 
         ' cadFornec
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(500, 243)
+        ClientSize = New Size(494, 640)
+        Controls.Add(Label10)
+        Controls.Add(txtPesq)
+        Controls.Add(cbSit)
+        Controls.Add(dgvFornec)
         Controls.Add(btnCancelarFornec)
         Controls.Add(btnLimparFornec)
         Controls.Add(btnSalvarFornec)
         Controls.Add(Label9)
-        Controls.Add(txtSituFornec)
         Controls.Add(Label8)
         Controls.Add(txtEstadoFornec)
         Controls.Add(Label7)
@@ -257,9 +333,13 @@ Partial Class cadFornec
         Controls.Add(txtCodFornec)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
+        MaximumSize = New Size(510, 679)
+        MinimizeBox = False
+        MinimumSize = New Size(510, 679)
         Name = "cadFornec"
         StartPosition = FormStartPosition.CenterScreen
         Text = "CADASTRO DE FORNECEDORES"
+        CType(dgvFornec, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -281,8 +361,15 @@ Partial Class cadFornec
     Friend WithEvents Label8 As Label
     Friend WithEvents txtEstadoFornec As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents txtSituFornec As TextBox
     Friend WithEvents btnCancelarFornec As Button
     Friend WithEvents btnLimparFornec As Button
     Friend WithEvents btnSalvarFornec As Button
+    Friend WithEvents dgvFornec As DataGridView
+    Friend WithEvents cod As DataGridViewTextBoxColumn
+    Friend WithEvents nome As DataGridViewTextBoxColumn
+    Friend WithEvents editar As DataGridViewImageColumn
+    Friend WithEvents excluir As DataGridViewImageColumn
+    Friend WithEvents cbSit As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtPesq As TextBox
 End Class

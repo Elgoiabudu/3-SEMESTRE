@@ -6,6 +6,7 @@
             rs = db.Execute(SQL)
 
             With dgvCateg
+
                 .Rows.Clear()
 
                 Do While rs.EOF = False
@@ -84,10 +85,11 @@
                     Dim resp = MsgBox($"Deseja excluir a categoria { .CurrentRow.Cells(1).Value}?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
 
                     If resp = MsgBoxResult.Yes Then
-                        SQL = $"delete from tbCateg where ID = {auxId}"
+                        SQL = $"delete from tbCateg where ID = { .CurrentRow.Cells(0).Value}"
                         rs = db.Execute(SQL)
                         txtCod.Clear()
                         txtDescCateg.Clear()
+                        MsgBox("Categoria excluida com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO")
                         PopularDvgCateg()
                     End If
                 End If

@@ -75,20 +75,18 @@ VALUES ('Carlos', 'Fernandes', 'carlos.fernandes@email.com', '111.222.333-44', '
 INSERT INTO tbClientes (nome, sobrenome, email, cpf, rg, telefoneCel, telefoneFixo, endereco, cidade, estado, CEP)
 VALUES ('Ana', 'Santos', 'ana.santos@email.com', '222.333.444-55', '2223334', '555-5555', '555-5555', 'Rua D', 'Brasília', 'DF', '22222-333');
 
-
 INSERT INTO tbFornec (nome, email, CNPJ, telefone, endereco, cidade, estado, situacao)
 VALUES
-('Fornecedor A', 'fornecedorA@email.com', '12345678901234', '123-456-7890', 'Rua A, 123', 'Cidade A', 'Estado A', 'Ativo'),
-('Fornecedor B', 'fornecedorB@email.com', '23456789012345', '234-567-8901', 'Rua B, 456', 'Cidade B', 'Estado B', 'Ativo'),
-('Fornecedor C', 'fornecedorC@email.com', '34567890123456', '345-678-9012', 'Rua C, 789', 'Cidade C', 'Estado C', 'Ativo'),
-('Fornecedor D', 'fornecedorD@email.com', '45678901234567', '456-789-0123', 'Rua D, 101', 'Cidade D', 'Estado D', 'Ativo'),
-('Fornecedor E', 'fornecedorE@email.com', '56789012345678', '567-890-1234', 'Rua E, 222', 'Cidade E', 'Estado E', 'Ativo'),
-('Fornecedor F', 'fornecedorF@email.com', '67890123456789', '678-901-2345', 'Rua F, 333', 'Cidade F', 'Estado F', 'Ativo'),
-('Fornecedor G', 'fornecedorG@email.com', '78901234567890', '789-012-3456', 'Rua G, 444', 'Cidade G', 'Estado G', 'Ativo'),
-('Fornecedor H', 'fornecedorH@email.com', '89012345678901', '890-123-4567', 'Rua H, 555', 'Cidade H', 'Estado H', 'Ativo'),
-('Fornecedor I', 'fornecedorI@email.com', '90123456789012', '901-234-5678', 'Rua I, 666', 'Cidade I', 'Estado I', 'Ativo'),
-('Fornecedor J', 'fornecedorJ@email.com', '01234567890123', '012-345-6789', 'Rua J, 777', 'Cidade J', 'Estado J', 'Ativo');
-
+('Fornecedor A', 'fornecedorA@email.com', '12345678901234', '123-456-7890', 'Rua A, 123', 'Cidade A', 'Estado A', 'ATIVO'),
+('Fornecedor B', 'fornecedorB@email.com', '23456789012345', '234-567-8901', 'Rua B, 456', 'Cidade B', 'Estado B', 'ATIVO'),
+('Fornecedor C', 'fornecedorC@email.com', '34567890123456', '345-678-9012', 'Rua C, 789', 'Cidade C', 'Estado C', 'ATIVO'),
+('Fornecedor D', 'fornecedorD@email.com', '45678901234567', '456-789-0123', 'Rua D, 101', 'Cidade D', 'Estado D', 'ATIVO'),
+('Fornecedor E', 'fornecedorE@email.com', '56789012345678', '567-890-1234', 'Rua E, 222', 'Cidade E', 'Estado E', 'ATIVO'),
+('Fornecedor F', 'fornecedorF@email.com', '67890123456789', '678-901-2345', 'Rua F, 333', 'Cidade F', 'Estado F', 'ATIVO'),
+('Fornecedor G', 'fornecedorG@email.com', '78901234567890', '789-012-3456', 'Rua G, 444', 'Cidade G', 'Estado G', 'ATIVO'),
+('Fornecedor H', 'fornecedorH@email.com', '89012345678901', '890-123-4567', 'Rua H, 555', 'Cidade H', 'Estado H', 'ATIVO'),
+('Fornecedor I', 'fornecedorI@email.com', '90123456789012', '901-234-5678', 'Rua I, 666', 'Cidade I', 'Estado I', 'INATIVO'),
+('Fornecedor J', 'fornecedorJ@email.com', '01234567890123', '012-345-6789', 'Rua J, 777', 'Cidade J', 'Estado J', 'INATIVO');
 
 insert into tbCateg (descricao)
 values
@@ -100,3 +98,5 @@ values
 ('COMÉDIA'),
 ('DRAMA'),
 ('ROMANCE');
+
+select * from tbFilmes

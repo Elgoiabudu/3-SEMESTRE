@@ -111,6 +111,9 @@ Partial Class cadCateg
         ' 
         dgvCateg.AllowUserToAddRows = False
         dgvCateg.AllowUserToDeleteRows = False
+        dgvCateg.AllowUserToResizeColumns = False
+        dgvCateg.AllowUserToResizeRows = False
+        dgvCateg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvCateg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvCateg.Columns.AddRange(New DataGridViewColumn() {cod, DES, EDITAR, EXCLUIR})
         dgvCateg.Location = New Point(12, 159)

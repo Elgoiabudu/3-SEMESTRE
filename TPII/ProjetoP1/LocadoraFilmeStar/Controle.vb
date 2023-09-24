@@ -1,11 +1,8 @@
 ﻿Module Controle
     Public diretorio, SQL, aux_cpf, resp As String
     Public db As New ADODB.Connection
-    Public rs As New ADODB.Recordset
+    Public rs, rsFornec, rsCateg As New ADODB.Recordset
     Public cont As Integer
-
-    Sub CarregarDados()
-    End Sub
 
     Sub Limpar()
         cadCli.txtNome.Text = ""
