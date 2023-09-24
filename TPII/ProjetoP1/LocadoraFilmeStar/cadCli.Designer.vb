@@ -344,6 +344,7 @@ Partial Class cadCli
         Controls.Add(txtNome)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
+        MinimizeBox = False
         Name = "cadCli"
         StartPosition = FormStartPosition.CenterScreen
         Text = "CADASTRO DE CLIENTES"

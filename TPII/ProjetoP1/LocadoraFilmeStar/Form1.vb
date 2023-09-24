@@ -35,4 +35,12 @@
             MsgBox("ERRO | Erro no formulário de pesquisa de clientes.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ERRO")
         End Try
     End Sub
+
+    Private Sub FilmesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilmesToolStripMenuItem.Click
+        Try
+            cadFilme.ShowDialog()
+        Catch ex As Exception
+            MsgBox("ERRO | Erro no formulário de cadastro de Filmes.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ERRO")
+        End Try
+    End Sub
 End Class

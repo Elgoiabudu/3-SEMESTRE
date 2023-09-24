@@ -11,15 +11,58 @@ CREATE TABLE tbClientes (
     cidade VARCHAR(100),
     estado VARCHAR(50),
     CEP VARCHAR(10),
+    foto VARCHAR(250),
     dataCadastro DATETIME NOT NULL
 				DEFAULT CURRENT_TIMESTAMP
 );
 
 select * from tbClientes
 
-ALTER TABLE tbClientes 
-ADD
-foto VARCHAR(250)
+CREATE TABLE tbFornec (
+	ID INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(150) NOT NULL,
+	email VARCHAR(150) NOT NULL,
+	CNPJ VARCHAR (150) UNIQUE NOT NULL,
+	telefone VARCHAR(14) NOT NULL,
+	endereco VARCHAR(255) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    estado VARCHAR(50) NOT NULL,
+	situacao VARCHAR (20) NOT NULL
+);
+
+create table tbCateg(
+ID int primary key identity(1,1),
+descricao varchar(100)
+);
+
+CREATE TABLE tbFilmes (
+    IDfilme INT PRIMARY KEY IDENTITY(1,1),
+    nome VARCHAR(250) NOT NULL,
+    lancamento DATETIME NOT NULL,
+    codFornec int,
+    codCateg INT,
+    valor DECIMAL(10,2),
+    sinopse VARCHAR (250),
+    FOREIGN KEY (codFornec) REFERENCES tbFornec(ID),
+    FOREIGN KEY (codCateg) REFERENCES tbCateg(ID)
+)
+
+drop TABLE tbFilmes
+
+select * from tbFilmes
+select * from tbFornec
+SELECT * from tbCateg
+
+INSERT INTO tbFilmes 
+(nome,
+lancamento,
+codFornec,
+codCateg,
+valor,
+sinopse)
+VALUES
+('teste', '2023-09-03 12:55:28.847', 1, 1, 5.00, 'adasdasdasdasdas')
+
 
 INSERT INTO tbClientes (nome, sobrenome, email, cpf, rg, telefoneCel, telefoneFixo, endereco, cidade, estado, CEP)
 VALUES ('João', 'Silva', 'joao.silva@email.com', '123.456.789-01', '1234567', '555-5555', '555-5555', 'Rua A', 'São Paulo', 'SP', '12345-678');
@@ -36,17 +79,7 @@ VALUES ('Ana', 'Santos', 'ana.santos@email.com', '222.333.444-55', '2223334', '5
 
 select * from tbClientes
 
-CREATE TABLE tbFornec (
-	ID INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(150) NOT NULL,
-	email VARCHAR(150) NOT NULL,
-	CNPJ VARCHAR (150) UNIQUE NOT NULL,
-	telefone VARCHAR(14) NOT NULL,
-	endereco VARCHAR(255) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
-    estado VARCHAR(50) NOT NULL,
-	situacao VARCHAR (20) NOT NULL
-);
+
 
 INSERT INTO tbFornec (nome, email, CNPJ, telefone, endereco, cidade, estado, situacao)
 VALUES
@@ -67,10 +100,7 @@ VALUES
 
 SELECT * FROM tbFornec
 
-create table tbCateg(
-ID int primary key identity(1,1),
-descricao varchar(100)
-);
+
 
 insert into tbCateg (descricao)
 values

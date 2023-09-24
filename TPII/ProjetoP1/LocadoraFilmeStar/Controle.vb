@@ -5,7 +5,6 @@
     Public cont As Integer
 
     Sub CarregarDados()
-
     End Sub
 
     Sub Limpar()

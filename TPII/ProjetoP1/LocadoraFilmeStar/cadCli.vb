@@ -72,7 +72,7 @@ Public Class cadCli
         Limpar()
     End Sub
 
-    Private Sub cadCli_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub cadCli_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         Limpar()
     End Sub
 End Class
