@@ -43,7 +43,6 @@ Partial Class cadCli
         Label11 = New Label()
         txtEstado = New TextBox()
         Label12 = New Label()
-        txtCEP = New TextBox()
         btnSalvar = New Button()
         btnLimpar = New Button()
         btnCancelar = New Button()
@@ -52,6 +51,7 @@ Partial Class cadCli
         maskRG = New MaskedTextBox()
         maskFixo = New MaskedTextBox()
         maskCel = New MaskedTextBox()
+        mkCEP = New MaskedTextBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -230,13 +230,6 @@ Partial Class cadCli
         Label12.TabIndex = 28
         Label12.Text = "CEP"
         ' 
-        ' txtCEP
-        ' 
-        txtCEP.Location = New Point(176, 291)
-        txtCEP.Name = "txtCEP"
-        txtCEP.Size = New Size(144, 23)
-        txtCEP.TabIndex = 10
-        ' 
         ' btnSalvar
         ' 
         btnSalvar.BackgroundImage = CType(resources.GetObject("btnSalvar.BackgroundImage"), Image)
@@ -309,11 +302,20 @@ Partial Class cadCli
         maskCel.Size = New Size(144, 23)
         maskCel.TabIndex = 6
         ' 
+        ' mkCEP
+        ' 
+        mkCEP.Location = New Point(175, 291)
+        mkCEP.Mask = "00000-000"
+        mkCEP.Name = "mkCEP"
+        mkCEP.Size = New Size(144, 23)
+        mkCEP.TabIndex = 10
+        ' 
         ' cadCli
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(437, 370)
+        ClientSize = New Size(435, 370)
+        Controls.Add(mkCEP)
         Controls.Add(maskCel)
         Controls.Add(maskFixo)
         Controls.Add(maskRG)
@@ -322,7 +324,6 @@ Partial Class cadCli
         Controls.Add(btnLimpar)
         Controls.Add(btnSalvar)
         Controls.Add(Label12)
-        Controls.Add(txtCEP)
         Controls.Add(Label11)
         Controls.Add(txtEstado)
         Controls.Add(Label10)
@@ -373,7 +374,6 @@ Partial Class cadCli
     Friend WithEvents Label11 As Label
     Friend WithEvents txtEstado As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents txtCEP As TextBox
     Friend WithEvents btnSalvar As Button
     Friend WithEvents btnLimpar As Button
     Friend WithEvents btnCancelar As Button
@@ -382,4 +382,5 @@ Partial Class cadCli
     Friend WithEvents maskRG As MaskedTextBox
     Friend WithEvents maskFixo As MaskedTextBox
     Friend WithEvents maskCel As MaskedTextBox
+    Friend WithEvents mkCEP As MaskedTextBox
 End Class

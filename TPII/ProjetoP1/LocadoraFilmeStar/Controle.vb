@@ -18,7 +18,7 @@
         cadCli.txtEndereco.Text = ""
         cadCli.txtCidade.Text = ""
         cadCli.txtEstado.Text = ""
-        cadCli.txtCEP.Text = ""
+        cadCli.mkCEP.Text = ""
         diretorio = ""
         cadCli.PictureBox1.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\net6.0-windows\", "\Fotos\avatar.png"))
     End Sub
@@ -52,7 +52,7 @@
                 .Rows.Clear()
 
                 Do While rs.EOF = False
-                    .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value,
+                    .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value,
                               rs.Fields(6).Value, rs.Fields(7).Value, rs.Fields(8).Value, rs.Fields(9).Value, rs.Fields(10).Value,
                               rs.Fields(11).Value, Nothing)
                     rs.MoveNext()

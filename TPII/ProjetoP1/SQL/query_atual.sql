@@ -50,6 +50,7 @@ CREATE TABLE tbFilmes (
 select * from tbFilmes
 select * from tbFornec
 SELECT * from tbCateg
+select * from tbClientes
 
 INSERT INTO tbFilmes 
 (nome,

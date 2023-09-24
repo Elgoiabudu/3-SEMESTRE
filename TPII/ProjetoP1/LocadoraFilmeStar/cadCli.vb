@@ -3,6 +3,10 @@
 Public Class cadCli
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
 
+        If diretorio = "" Then
+            MsgBox("ERRO | Erro ao gravar o registro!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ERRO")
+            Exit Sub
+        End If
 
         Try
 
@@ -35,7 +39,7 @@ Public Class cadCli
                 '{txtEndereco.Text}',
                 '{txtCidade.Text}',
                 '{txtEstado.Text}',
-                '{txtCEP.Text}',
+                '{mkCEP.Text}',
                 '{diretorio}')
                 "
                 rs = db.Execute(SQL)
@@ -64,7 +68,7 @@ Public Class cadCli
                 PictureBox1.Load(diretorio)
             End With
         Catch ex As Exception
-            MsgBox(ex)
+            diretorio = ""
         End Try
     End Sub
 
@@ -74,5 +78,14 @@ Public Class cadCli
 
     Private Sub cadCli_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         Limpar()
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Limpar()
+        Me.Close()
+    End Sub
+
+    Private Sub cadCli_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        diretorio = ""
     End Sub
 End Class

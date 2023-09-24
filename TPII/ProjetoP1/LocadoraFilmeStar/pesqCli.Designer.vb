@@ -24,7 +24,6 @@ Partial Class pesqCli
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(pesqCli))
         Label12 = New Label()
-        txtCEP = New TextBox()
         Label11 = New Label()
         txtEstado = New TextBox()
         Label10 = New Label()
@@ -32,18 +31,14 @@ Partial Class pesqCli
         Label9 = New Label()
         txtEndereco = New TextBox()
         Label8 = New Label()
-        txtCelular = New TextBox()
         Label7 = New Label()
-        txtFixo = New TextBox()
         Label6 = New Label()
-        txtCPF = New TextBox()
         Label5 = New Label()
-        txtRG = New TextBox()
         Label4 = New Label()
         txtEmail = New TextBox()
         Label3 = New Label()
         txtCod = New TextBox()
-        PictureBox1 = New PictureBox()
+        foto = New PictureBox()
         Label2 = New Label()
         txtSobrenome = New TextBox()
         Label1 = New Label()
@@ -61,11 +56,18 @@ Partial Class pesqCli
         CIDADE = New DataGridViewTextBoxColumn()
         ESTADO = New DataGridViewTextBoxColumn()
         CEP = New DataGridViewTextBoxColumn()
-        AÇÕES = New DataGridViewTextBoxColumn()
+        editar = New DataGridViewImageColumn()
+        deletar = New DataGridViewImageColumn()
         btnSalvar = New Button()
         Label13 = New Label()
-        TextBox1 = New TextBox()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        txtPesq = New TextBox()
+        mkRG = New MaskedTextBox()
+        mkCPF = New MaskedTextBox()
+        mkCel = New MaskedTextBox()
+        mkFixo = New MaskedTextBox()
+        mkCEP = New MaskedTextBox()
+        OpenFileDialog1 = New OpenFileDialog()
+        CType(foto, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvCli, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -77,15 +79,6 @@ Partial Class pesqCli
         Label12.Size = New Size(28, 15)
         Label12.TabIndex = 56
         Label12.Text = "CEP"
-        ' 
-        ' txtCEP
-        ' 
-        txtCEP.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtCEP.Enabled = False
-        txtCEP.Location = New Point(767, 115)
-        txtCEP.Name = "txtCEP"
-        txtCEP.Size = New Size(144, 23)
-        txtCEP.TabIndex = 55
         ' 
         ' Label11
         ' 
@@ -99,11 +92,10 @@ Partial Class pesqCli
         ' txtEstado
         ' 
         txtEstado.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtEstado.Enabled = False
         txtEstado.Location = New Point(614, 115)
         txtEstado.Name = "txtEstado"
         txtEstado.Size = New Size(144, 23)
-        txtEstado.TabIndex = 53
+        txtEstado.TabIndex = 10
         ' 
         ' Label10
         ' 
@@ -117,11 +109,10 @@ Partial Class pesqCli
         ' txtCidade
         ' 
         txtCidade.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtCidade.Enabled = False
         txtCidade.Location = New Point(443, 115)
         txtCidade.Name = "txtCidade"
         txtCidade.Size = New Size(165, 23)
-        txtCidade.TabIndex = 51
+        txtCidade.TabIndex = 9
         ' 
         ' Label9
         ' 
@@ -135,11 +126,10 @@ Partial Class pesqCli
         ' txtEndereco
         ' 
         txtEndereco.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtEndereco.Enabled = False
         txtEndereco.Location = New Point(164, 115)
         txtEndereco.Name = "txtEndereco"
         txtEndereco.Size = New Size(273, 23)
-        txtEndereco.TabIndex = 49
+        txtEndereco.TabIndex = 8
         ' 
         ' Label8
         ' 
@@ -150,15 +140,6 @@ Partial Class pesqCli
         Label8.TabIndex = 48
         Label8.Text = "TELEFONE CELULAR"
         ' 
-        ' txtCelular
-        ' 
-        txtCelular.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtCelular.Enabled = False
-        txtCelular.Location = New Point(11, 115)
-        txtCelular.Name = "txtCelular"
-        txtCelular.Size = New Size(144, 23)
-        txtCelular.TabIndex = 47
-        ' 
         ' Label7
         ' 
         Label7.AutoSize = True
@@ -167,15 +148,6 @@ Partial Class pesqCli
         Label7.Size = New Size(89, 15)
         Label7.TabIndex = 46
         Label7.Text = "TELEFONE FIXO"
-        ' 
-        ' txtFixo
-        ' 
-        txtFixo.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtFixo.Enabled = False
-        txtFixo.Location = New Point(1063, 71)
-        txtFixo.Name = "txtFixo"
-        txtFixo.Size = New Size(144, 23)
-        txtFixo.TabIndex = 45
         ' 
         ' Label6
         ' 
@@ -186,15 +158,6 @@ Partial Class pesqCli
         Label6.TabIndex = 44
         Label6.Text = "CPF"
         ' 
-        ' txtCPF
-        ' 
-        txtCPF.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtCPF.Enabled = False
-        txtCPF.Location = New Point(513, 71)
-        txtCPF.Name = "txtCPF"
-        txtCPF.Size = New Size(144, 23)
-        txtCPF.TabIndex = 43
-        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -203,15 +166,6 @@ Partial Class pesqCli
         Label5.Size = New Size(22, 15)
         Label5.TabIndex = 42
         Label5.Text = "RG"
-        ' 
-        ' txtRG
-        ' 
-        txtRG.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtRG.Enabled = False
-        txtRG.Location = New Point(362, 71)
-        txtRG.Name = "txtRG"
-        txtRG.Size = New Size(144, 23)
-        txtRG.TabIndex = 41
         ' 
         ' Label4
         ' 
@@ -225,11 +179,10 @@ Partial Class pesqCli
         ' txtEmail
         ' 
         txtEmail.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtEmail.Enabled = False
         txtEmail.Location = New Point(664, 71)
         txtEmail.Name = "txtEmail"
         txtEmail.Size = New Size(393, 23)
-        txtEmail.TabIndex = 39
+        txtEmail.TabIndex = 5
         ' 
         ' Label3
         ' 
@@ -243,20 +196,22 @@ Partial Class pesqCli
         ' txtCod
         ' 
         txtCod.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        txtCod.Enabled = False
         txtCod.Location = New Point(11, 27)
         txtCod.Name = "txtCod"
         txtCod.Size = New Size(144, 23)
         txtCod.TabIndex = 37
         ' 
-        ' PictureBox1
+        ' foto
         ' 
-        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
-        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(1213, 9)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(108, 138)
-        PictureBox1.TabIndex = 36
-        PictureBox1.TabStop = False
+        foto.BackgroundImage = CType(resources.GetObject("foto.BackgroundImage"), Image)
+        foto.BackgroundImageLayout = ImageLayout.Stretch
+        foto.Location = New Point(1213, 9)
+        foto.Name = "foto"
+        foto.Size = New Size(108, 138)
+        foto.SizeMode = PictureBoxSizeMode.StretchImage
+        foto.TabIndex = 36
+        foto.TabStop = False
         ' 
         ' Label2
         ' 
@@ -270,11 +225,10 @@ Partial Class pesqCli
         ' txtSobrenome
         ' 
         txtSobrenome.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtSobrenome.Enabled = False
         txtSobrenome.Location = New Point(160, 71)
         txtSobrenome.Name = "txtSobrenome"
         txtSobrenome.Size = New Size(196, 23)
-        txtSobrenome.TabIndex = 34
+        txtSobrenome.TabIndex = 2
         ' 
         ' Label1
         ' 
@@ -288,24 +242,24 @@ Partial Class pesqCli
         ' txtNome
         ' 
         txtNome.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        txtNome.Enabled = False
         txtNome.Location = New Point(11, 71)
         txtNome.Name = "txtNome"
         txtNome.Size = New Size(144, 23)
-        txtNome.TabIndex = 32
+        txtNome.TabIndex = 1
         ' 
         ' dgvCli
         ' 
         dgvCli.AllowUserToAddRows = False
         dgvCli.AllowUserToDeleteRows = False
-        dgvCli.AllowUserToOrderColumns = True
         dgvCli.AllowUserToResizeColumns = False
         dgvCli.AllowUserToResizeRows = False
         dgvCli.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvCli.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCli.Columns.AddRange(New DataGridViewColumn() {ID, NOME, SOBRENOME, EMAIL, CPF, RG, CELULAR, TELEFONE, ENDERECO, CIDADE, ESTADO, CEP, AÇÕES})
+        dgvCli.Columns.AddRange(New DataGridViewColumn() {ID, NOME, SOBRENOME, EMAIL, CPF, RG, CELULAR, TELEFONE, ENDERECO, CIDADE, ESTADO, CEP, editar, deletar})
         dgvCli.Location = New Point(11, 173)
         dgvCli.Name = "dgvCli"
+        dgvCli.ReadOnly = True
+        dgvCli.RowHeadersWidth = 5
         dgvCli.RowTemplate.Height = 25
         dgvCli.Size = New Size(1310, 399)
         dgvCli.TabIndex = 57
@@ -326,56 +280,79 @@ Partial Class pesqCli
         ' 
         SOBRENOME.HeaderText = "SOBRENOME"
         SOBRENOME.Name = "SOBRENOME"
+        SOBRENOME.ReadOnly = True
         ' 
         ' EMAIL
         ' 
         EMAIL.HeaderText = "EMAIL"
         EMAIL.Name = "EMAIL"
+        EMAIL.ReadOnly = True
         ' 
         ' CPF
         ' 
         CPF.HeaderText = "CPF"
         CPF.Name = "CPF"
+        CPF.ReadOnly = True
         ' 
         ' RG
         ' 
         RG.HeaderText = "RG"
         RG.Name = "RG"
+        RG.ReadOnly = True
         ' 
         ' CELULAR
         ' 
         CELULAR.HeaderText = "CELULAR"
         CELULAR.Name = "CELULAR"
+        CELULAR.ReadOnly = True
         ' 
         ' TELEFONE
         ' 
         TELEFONE.HeaderText = "TELEFONE"
         TELEFONE.Name = "TELEFONE"
+        TELEFONE.ReadOnly = True
         ' 
         ' ENDERECO
         ' 
         ENDERECO.HeaderText = "ENDERECO"
         ENDERECO.Name = "ENDERECO"
+        ENDERECO.ReadOnly = True
         ' 
         ' CIDADE
         ' 
         CIDADE.HeaderText = "CIDADE"
         CIDADE.Name = "CIDADE"
+        CIDADE.ReadOnly = True
         ' 
         ' ESTADO
         ' 
         ESTADO.HeaderText = "ESTADO"
         ESTADO.Name = "ESTADO"
+        ESTADO.ReadOnly = True
         ' 
         ' CEP
         ' 
         CEP.HeaderText = "CEP"
         CEP.Name = "CEP"
+        CEP.ReadOnly = True
         ' 
-        ' AÇÕES
+        ' editar
         ' 
-        AÇÕES.HeaderText = "AÇÕES"
-        AÇÕES.Name = "AÇÕES"
+        editar.HeaderText = "EDITAR"
+        editar.Image = CType(resources.GetObject("editar.Image"), Image)
+        editar.Name = "editar"
+        editar.ReadOnly = True
+        editar.Resizable = DataGridViewTriState.True
+        editar.SortMode = DataGridViewColumnSortMode.Automatic
+        ' 
+        ' deletar
+        ' 
+        deletar.HeaderText = "DELETAR"
+        deletar.Image = CType(resources.GetObject("deletar.Image"), Image)
+        deletar.Name = "deletar"
+        deletar.ReadOnly = True
+        deletar.Resizable = DataGridViewTriState.True
+        deletar.SortMode = DataGridViewColumnSortMode.Automatic
         ' 
         ' btnSalvar
         ' 
@@ -384,7 +361,7 @@ Partial Class pesqCli
         btnSalvar.Location = New Point(1167, 97)
         btnSalvar.Name = "btnSalvar"
         btnSalvar.Size = New Size(40, 41)
-        btnSalvar.TabIndex = 58
+        btnSalvar.TabIndex = 12
         btnSalvar.TextAlign = ContentAlignment.MiddleRight
         btnSalvar.UseVisualStyleBackColor = True
         ' 
@@ -397,25 +374,78 @@ Partial Class pesqCli
         Label13.TabIndex = 60
         Label13.Text = "DIGITE UM NOME PARA PESQUISAR"
         ' 
-        ' TextBox1
+        ' txtPesq
         ' 
-        TextBox1.BackColor = Color.White
-        TextBox1.Location = New Point(212, 144)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(396, 23)
-        TextBox1.TabIndex = 59
+        txtPesq.BackColor = Color.White
+        txtPesq.Location = New Point(212, 144)
+        txtPesq.Name = "txtPesq"
+        txtPesq.Size = New Size(396, 23)
+        txtPesq.TabIndex = 13
+        ' 
+        ' mkRG
+        ' 
+        mkRG.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        mkRG.Location = New Point(362, 71)
+        mkRG.Mask = "00000000-0"
+        mkRG.Name = "mkRG"
+        mkRG.Size = New Size(144, 23)
+        mkRG.TabIndex = 3
+        ' 
+        ' mkCPF
+        ' 
+        mkCPF.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        mkCPF.Location = New Point(512, 71)
+        mkCPF.Mask = "000,000,000-00"
+        mkCPF.Name = "mkCPF"
+        mkCPF.Size = New Size(144, 23)
+        mkCPF.TabIndex = 4
+        ' 
+        ' mkCel
+        ' 
+        mkCel.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        mkCel.Location = New Point(11, 115)
+        mkCel.Mask = "(00)00000-0000"
+        mkCel.Name = "mkCel"
+        mkCel.Size = New Size(144, 23)
+        mkCel.TabIndex = 7
+        ' 
+        ' mkFixo
+        ' 
+        mkFixo.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        mkFixo.Location = New Point(1063, 71)
+        mkFixo.Mask = "(00)0000-0000"
+        mkFixo.Name = "mkFixo"
+        mkFixo.Size = New Size(144, 23)
+        mkFixo.TabIndex = 6
+        ' 
+        ' mkCEP
+        ' 
+        mkCEP.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        mkCEP.Location = New Point(767, 115)
+        mkCEP.Mask = "00000-000"
+        mkCEP.Name = "mkCEP"
+        mkCEP.Size = New Size(144, 23)
+        mkCEP.TabIndex = 61
+        ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
         ' pesqCli
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1333, 584)
+        Controls.Add(mkCEP)
+        Controls.Add(mkFixo)
+        Controls.Add(mkCel)
+        Controls.Add(mkCPF)
+        Controls.Add(mkRG)
         Controls.Add(Label13)
-        Controls.Add(TextBox1)
+        Controls.Add(txtPesq)
         Controls.Add(btnSalvar)
         Controls.Add(dgvCli)
         Controls.Add(Label12)
-        Controls.Add(txtCEP)
         Controls.Add(Label11)
         Controls.Add(txtEstado)
         Controls.Add(Label10)
@@ -423,34 +453,31 @@ Partial Class pesqCli
         Controls.Add(Label9)
         Controls.Add(txtEndereco)
         Controls.Add(Label8)
-        Controls.Add(txtCelular)
         Controls.Add(Label7)
-        Controls.Add(txtFixo)
         Controls.Add(Label6)
-        Controls.Add(txtCPF)
         Controls.Add(Label5)
-        Controls.Add(txtRG)
         Controls.Add(Label4)
         Controls.Add(txtEmail)
         Controls.Add(Label3)
         Controls.Add(txtCod)
-        Controls.Add(PictureBox1)
+        Controls.Add(foto)
         Controls.Add(Label2)
         Controls.Add(txtSobrenome)
         Controls.Add(Label1)
         Controls.Add(txtNome)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
+        MinimizeBox = False
         Name = "pesqCli"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "CONSULTA DE CLIENTES"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(foto, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvCli, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Label12 As Label
-    Friend WithEvents txtCEP As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents txtEstado As TextBox
     Friend WithEvents Label10 As Label
@@ -458,24 +485,24 @@ Partial Class pesqCli
     Friend WithEvents Label9 As Label
     Friend WithEvents txtEndereco As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtCelular As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtFixo As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtCPF As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtRG As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtCod As TextBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents foto As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents txtSobrenome As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtNome As TextBox
     Friend WithEvents dgvCli As DataGridView
     Friend WithEvents btnSalvar As Button
+    Friend WithEvents Label13 As Label
+    Friend WithEvents txtPesq As TextBox
+    Friend WithEvents mkRG As MaskedTextBox
+    Friend WithEvents mkCPF As MaskedTextBox
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents NOME As DataGridViewTextBoxColumn
     Friend WithEvents SOBRENOME As DataGridViewTextBoxColumn
@@ -488,7 +515,10 @@ Partial Class pesqCli
     Friend WithEvents CIDADE As DataGridViewTextBoxColumn
     Friend WithEvents ESTADO As DataGridViewTextBoxColumn
     Friend WithEvents CEP As DataGridViewTextBoxColumn
-    Friend WithEvents AÇÕES As DataGridViewTextBoxColumn
-    Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents editar As DataGridViewImageColumn
+    Friend WithEvents deletar As DataGridViewImageColumn
+    Friend WithEvents mkCel As MaskedTextBox
+    Friend WithEvents mkFixo As MaskedTextBox
+    Friend WithEvents mkCEP As MaskedTextBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
