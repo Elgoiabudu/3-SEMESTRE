@@ -7,6 +7,9 @@
     <Compile Update="cadCli.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="cadFilme.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="cadFornec.vb">
       <SubType>Form</SubType>
     </Compile>

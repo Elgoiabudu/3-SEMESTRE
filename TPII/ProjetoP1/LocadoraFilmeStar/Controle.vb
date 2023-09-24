@@ -21,12 +21,13 @@
         cadCli.txtEstado.Text = ""
         cadCli.txtCEP.Text = ""
         diretorio = ""
+        cadCli.PictureBox1.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\net6.0-windows\", "\Fotos\avatar.png"))
     End Sub
 
     Sub ConectarBanco()
         Try
             db = CreateObject("ADODB.Connection")
-            db.Open("Provider=SQLOLEDB;Data Source=LAB5-12;Initial Catalog=filmeStar;trusted_connection=yes;")
+            db.Open("Provider=SQLOLEDB;Data Source=DESKTOP-J8VD9D7;Initial Catalog=filmeStar;trusted_connection=yes;")
         Catch ex As Exception
             MsgBox("ERRO | Impossível se conectar ao banco de dados!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try

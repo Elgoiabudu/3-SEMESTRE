@@ -145,3 +145,33 @@ INSERT INTO tbClientes
 delete from tbClientes where id = 1006
 
 select * from tbClientes
+
+delete from tbClientes where ID = 1002
+
+INSERT INTO tbClientes
+                (nome,
+                sobrenome,
+                email,
+                cpf,
+                rg,
+                telefoneCel,
+                telefoneFixo,
+                endereco,
+                cidade,
+                estado,
+                cep,
+                foto)
+                VALUES
+                ('{txtNome.Text}',
+                '{txtSobrenome.Text}',
+                '{txtEmail.Text}',
+                '{maskCPF.Text}',
+                '{maskRG.Text}',
+                '{maskCel.Text}',
+                '{maskFixo.Text}',
+                '{txtEndereco.Text}',
+                '{txtCidade.Text}',
+                '{txtEstado.Text}',
+                '{txtCEP.Text}',
+                '{diretorio}')
+                

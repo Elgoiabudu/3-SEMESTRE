@@ -1,4 +1,6 @@
-﻿Public Class cadCli
+﻿Imports System.ComponentModel
+
+Public Class cadCli
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
 
 
@@ -67,6 +69,10 @@
     End Sub
 
     Private Sub btnLimpar_Click(sender As Object, e As EventArgs) Handles btnLimpar.Click
+        Limpar()
+    End Sub
+
+    Private Sub cadCli_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Limpar()
     End Sub
 End Class
