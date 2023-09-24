@@ -282,7 +282,7 @@ Partial Class cadFilme
         TextBox1.Location = New Point(794, 6)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(383, 23)
-        TextBox1.TabIndex = 18
+        TextBox1.TabIndex = 12
         ' 
         ' txtCod
         ' 
@@ -290,7 +290,7 @@ Partial Class cadFilme
         txtCod.Name = "txtCod"
         txtCod.ReadOnly = True
         txtCod.Size = New Size(100, 23)
-        txtCod.TabIndex = 20
+        txtCod.TabIndex = 0
         ' 
         ' cadFilme
         ' 

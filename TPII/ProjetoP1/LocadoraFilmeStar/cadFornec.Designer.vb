@@ -69,7 +69,7 @@ Partial Class cadFornec
         txtCodFornec.Location = New Point(12, 27)
         txtCodFornec.Name = "txtCodFornec"
         txtCodFornec.Size = New Size(144, 23)
-        txtCodFornec.TabIndex = 11
+        txtCodFornec.TabIndex = 1
         ' 
         ' Label1
         ' 
@@ -82,10 +82,11 @@ Partial Class cadFornec
         ' 
         ' txtNomeFornec
         ' 
+        txtNomeFornec.CharacterCasing = CharacterCasing.Upper
         txtNomeFornec.Location = New Point(12, 71)
         txtNomeFornec.Name = "txtNomeFornec"
         txtNomeFornec.Size = New Size(144, 23)
-        txtNomeFornec.TabIndex = 13
+        txtNomeFornec.TabIndex = 2
         ' 
         ' Label2
         ' 
@@ -101,7 +102,7 @@ Partial Class cadFornec
         txtEmailFornec.Location = New Point(175, 71)
         txtEmailFornec.Name = "txtEmailFornec"
         txtEmailFornec.Size = New Size(144, 23)
-        txtEmailFornec.TabIndex = 15
+        txtEmailFornec.TabIndex = 3
         ' 
         ' Label4
         ' 
@@ -117,7 +118,7 @@ Partial Class cadFornec
         txtCNPJ.Location = New Point(341, 71)
         txtCNPJ.Name = "txtCNPJ"
         txtCNPJ.Size = New Size(144, 23)
-        txtCNPJ.TabIndex = 17
+        txtCNPJ.TabIndex = 4
         ' 
         ' Label5
         ' 
@@ -133,7 +134,7 @@ Partial Class cadFornec
         txtFoneFornec.Location = New Point(12, 115)
         txtFoneFornec.Name = "txtFoneFornec"
         txtFoneFornec.Size = New Size(144, 23)
-        txtFoneFornec.TabIndex = 19
+        txtFoneFornec.TabIndex = 5
         ' 
         ' Label6
         ' 
@@ -146,10 +147,11 @@ Partial Class cadFornec
         ' 
         ' txtEnderecoFornec
         ' 
+        txtEnderecoFornec.CharacterCasing = CharacterCasing.Upper
         txtEnderecoFornec.Location = New Point(175, 115)
         txtEnderecoFornec.Name = "txtEnderecoFornec"
         txtEnderecoFornec.Size = New Size(310, 23)
-        txtEnderecoFornec.TabIndex = 21
+        txtEnderecoFornec.TabIndex = 6
         ' 
         ' Label7
         ' 
@@ -162,10 +164,11 @@ Partial Class cadFornec
         ' 
         ' txtCidadeFornec
         ' 
+        txtCidadeFornec.CharacterCasing = CharacterCasing.Upper
         txtCidadeFornec.Location = New Point(12, 159)
         txtCidadeFornec.Name = "txtCidadeFornec"
         txtCidadeFornec.Size = New Size(144, 23)
-        txtCidadeFornec.TabIndex = 23
+        txtCidadeFornec.TabIndex = 7
         ' 
         ' Label8
         ' 
@@ -178,10 +181,11 @@ Partial Class cadFornec
         ' 
         ' txtEstadoFornec
         ' 
+        txtEstadoFornec.CharacterCasing = CharacterCasing.Upper
         txtEstadoFornec.Location = New Point(175, 159)
         txtEstadoFornec.Name = "txtEstadoFornec"
         txtEstadoFornec.Size = New Size(144, 23)
-        txtEstadoFornec.TabIndex = 25
+        txtEstadoFornec.TabIndex = 8
         ' 
         ' Label9
         ' 
@@ -199,7 +203,7 @@ Partial Class cadFornec
         btnCancelarFornec.Location = New Point(375, 188)
         btnCancelarFornec.Name = "btnCancelarFornec"
         btnCancelarFornec.Size = New Size(110, 41)
-        btnCancelarFornec.TabIndex = 34
+        btnCancelarFornec.TabIndex = 12
         btnCancelarFornec.Text = "CANCELAR"
         btnCancelarFornec.TextAlign = ContentAlignment.MiddleRight
         btnCancelarFornec.UseVisualStyleBackColor = True
@@ -211,7 +215,7 @@ Partial Class cadFornec
         btnLimparFornec.Location = New Point(199, 188)
         btnLimparFornec.Name = "btnLimparFornec"
         btnLimparFornec.Size = New Size(110, 41)
-        btnLimparFornec.TabIndex = 33
+        btnLimparFornec.TabIndex = 11
         btnLimparFornec.Text = "LIMPAR"
         btnLimparFornec.TextAlign = ContentAlignment.MiddleRight
         btnLimparFornec.UseVisualStyleBackColor = True
@@ -223,7 +227,7 @@ Partial Class cadFornec
         btnSalvarFornec.Location = New Point(12, 188)
         btnSalvarFornec.Name = "btnSalvarFornec"
         btnSalvarFornec.Size = New Size(110, 41)
-        btnSalvarFornec.TabIndex = 32
+        btnSalvarFornec.TabIndex = 10
         btnSalvarFornec.Text = "SALVAR"
         btnSalvarFornec.TextAlign = ContentAlignment.MiddleRight
         btnSalvarFornec.UseVisualStyleBackColor = True
@@ -283,7 +287,7 @@ Partial Class cadFornec
         cbSit.Location = New Point(341, 159)
         cbSit.Name = "cbSit"
         cbSit.Size = New Size(141, 23)
-        cbSit.TabIndex = 36
+        cbSit.TabIndex = 9
         cbSit.Text = "ATIVO"
         ' 
         ' Label10
@@ -300,7 +304,7 @@ Partial Class cadFornec
         txtPesq.Location = New Point(120, 244)
         txtPesq.Name = "txtPesq"
         txtPesq.Size = New Size(178, 23)
-        txtPesq.TabIndex = 37
+        txtPesq.TabIndex = 13
         ' 
         ' cadFornec
         ' 

@@ -99,4 +99,15 @@ values
 ('DRAMA'),
 ('ROMANCE');
 
-select * from tbFilmes
+
+
+UPDATE tbFilmes SET
+nome = 'Os Infiltrados 2',
+lancamento = '2021-08-10',
+codFornec = 2024,
+codCateg = 3,
+capa = 'C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\bin\Debug\capas\CAPITA MARVEL.jpg',
+valor = 6.00,
+sinopse = 'TESTE'
+WHERE
+IDfilme = 7

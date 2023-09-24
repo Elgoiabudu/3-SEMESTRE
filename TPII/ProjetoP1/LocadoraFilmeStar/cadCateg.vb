@@ -24,22 +24,24 @@
         Dim cod = txtCod.Text
 
         Try
-
             If txtCod.Text = "" Then
-                SQL = "SELECT * FROM tbCateg where descricao='" & txtDescCateg.Text & "'"
-                rs = db.Execute(SQL)
-                Dim auxID = rs.Fields(0).Value
 
-                If rs.EOF = True Then
+                SQL = $"SELECT * FROM tbCateg where descricao = '{txtDescCateg.Text}'"
+                rs = db.Execute(SQL)
+
+                If rs.EOF = False Then
+                    MsgBox("Categoria já cadastrada.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+                Else
                     SQL = "INSERT INTO tbCateg values ('" & txtDescCateg.Text & "')"
                     rs = db.Execute(SQL)
                     MsgBox("Categoria cadastrada com sucesso.", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
                     txtDescCateg.Text = ""
                     PopularDvgCateg()
-                Else
-                    MsgBox("Categoria já cadastrada.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
                 End If
+
+
             Else
+
                 SQL = $"update tbCateg set descricao = '{txtDescCateg.Text}' where ID = {cod}"
                 rs = db.Execute(SQL)
                 MsgBox("Categoria atualizada com sucesso.", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")

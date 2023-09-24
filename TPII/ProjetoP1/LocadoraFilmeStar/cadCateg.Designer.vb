@@ -45,7 +45,7 @@ Partial Class cadCateg
         btnCancelar.Location = New Point(322, 112)
         btnCancelar.Name = "btnCancelar"
         btnCancelar.Size = New Size(110, 41)
-        btnCancelar.TabIndex = 34
+        btnCancelar.TabIndex = 4
         btnCancelar.Text = "CANCELAR"
         btnCancelar.TextAlign = ContentAlignment.MiddleRight
         btnCancelar.UseVisualStyleBackColor = True
@@ -57,7 +57,7 @@ Partial Class cadCateg
         btnLimpar.Location = New Point(173, 112)
         btnLimpar.Name = "btnLimpar"
         btnLimpar.Size = New Size(110, 41)
-        btnLimpar.TabIndex = 33
+        btnLimpar.TabIndex = 3
         btnLimpar.Text = "LIMPAR"
         btnLimpar.TextAlign = ContentAlignment.MiddleRight
         btnLimpar.UseVisualStyleBackColor = True
@@ -69,17 +69,18 @@ Partial Class cadCateg
         btnSalvar.Location = New Point(12, 112)
         btnSalvar.Name = "btnSalvar"
         btnSalvar.Size = New Size(110, 41)
-        btnSalvar.TabIndex = 32
+        btnSalvar.TabIndex = 2
         btnSalvar.Text = "SALVAR"
         btnSalvar.TextAlign = ContentAlignment.MiddleRight
         btnSalvar.UseVisualStyleBackColor = True
         ' 
         ' txtDescCateg
         ' 
+        txtDescCateg.CharacterCasing = CharacterCasing.Upper
         txtDescCateg.Location = New Point(12, 73)
         txtDescCateg.Name = "txtDescCateg"
         txtDescCateg.Size = New Size(420, 23)
-        txtDescCateg.TabIndex = 13
+        txtDescCateg.TabIndex = 1
         ' 
         ' Label1
         ' 
