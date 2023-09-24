@@ -99,7 +99,9 @@ values
 ('DRAMA'),
 ('ROMANCE');
 
+DELETE FROM tbCateg
 
+select * from tbCateg
 
 UPDATE tbFilmes SET
 nome = 'Os Infiltrados 2',
