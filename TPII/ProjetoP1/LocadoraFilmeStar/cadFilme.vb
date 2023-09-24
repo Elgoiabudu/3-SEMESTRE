@@ -1,25 +1,52 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Xml
-
+Imports System.Data.SqlClient
 Public Class cadFilme
+
+    Private Sub Limpar()
+        txtNome.Text = ""
+        txtValor.Text = ""
+        txtSinopse.Text = ""
+        diretorio = ""
+        capaFilme.Load(AppDomain.CurrentDomain.BaseDirectory.Replace("\net6.0-windows\", "\capas\capa_padrao.jpg"))
+        txtNome.Focus()
+    End Sub
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
 
-        SQL = $"INSERT INTO tbFilmes 
-                (nome,
+        Try
+            If diretorio = "" Then
+                MsgBox("ERRO | Registro não foi processado no banco! Verifique os dados digitados.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+                Exit Sub
+            End If
+
+            SQL = $"INSERT INTO tbFilmes 
+                (
+                nome,
                 lancamento,
                 codFornec,
                 codCateg,
                 valor,
                 capa,
-                sinopse)
+                sinopse
+                )
                 VALUES
-                ({txtNome.Text}, 
-                {dataLanc.Value.Date}, 
-                {cbFornec.Text}, 
-                {cbCateg.Text}, 
+                (
+                '{txtNome.Text}', 
+                '{dataLanc.Value.Date}', 
+                {cbFornec.SelectedValue}, 
+                {cbCateg.SelectedValue}, 
                 {txtValor.Text}, 
-                {diretorio}, 
-                {txtSinopse.Text})"
+                '{diretorio}', 
+                '{txtSinopse.Text}'
+                )"
+            rs = db.Execute(SQL)
+
+            MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Sucesso!")
+
+            Limpar()
+        Catch ex As Exception
+            MsgBox("ERRO | Registro não foi processado no banco! Verifique os dados digitados.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+        End Try
 
     End Sub
 
@@ -58,19 +85,46 @@ Public Class cadFilme
     End Sub
 
     Private Sub cadFilme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SQL = "SELECT ID, nome FROM tbFornec"
-        rs = db.Execute(SQL)
+        Dim con As New SqlConnection("Server = DESKTOP-J8VD9D7; Database = filmestar;Integrated Security = true;")
+        Dim queryFornec As New SqlCommand("select * from tbFornec", con)
+        Dim queryCateg As New SqlCommand("select * from tbCateg", con)
 
-        Dim lista As New List(Of String)()
+        Dim adapterF As New SqlDataAdapter(queryFornec)
+        Dim adapterC As New SqlDataAdapter(queryCateg)
+        Dim tabela, tabelaC As New DataTable()
 
-        cont = 0
+        Try
+            adapterF.Fill(tabela)
 
-        Do While rs.EOF = True
-            lista.Add("a")
-            rs.MoveNext()
-        Loop
+            cbFornec.DataSource = tabela
 
-        cbFornec.DataSource = lista
+            cbFornec.DisplayMember = "nome"
+            cbFornec.ValueMember = "ID"
 
+            adapterC.Fill(tabelaC)
+
+            cbCateg.DataSource = tabelaC
+
+            cbCateg.DisplayMember = "descricao"
+            cbCateg.ValueMember = "ID"
+
+
+            con.Close()
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub cadFilme_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
+        Limpar()
+    End Sub
+
+    Private Sub btnLimpar_Click(sender As Object, e As EventArgs) Handles btnLimpar.Click
+        Limpar()
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
     End Sub
 End Class

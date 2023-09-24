@@ -47,6 +47,7 @@ Partial Class cadFilme
         ' 
         ' txtCod
         ' 
+        txtCod.Enabled = False
         txtCod.Location = New Point(12, 27)
         txtCod.Name = "txtCod"
         txtCod.Size = New Size(134, 23)

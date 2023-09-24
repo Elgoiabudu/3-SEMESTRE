@@ -47,8 +47,6 @@ CREATE TABLE tbFilmes (
     FOREIGN KEY (codCateg) REFERENCES tbCateg(ID)
 )
 
-drop TABLE tbFilmes
-
 select * from tbFilmes
 select * from tbFornec
 SELECT * from tbCateg
@@ -77,10 +75,6 @@ INSERT INTO tbClientes (nome, sobrenome, email, cpf, rg, telefoneCel, telefoneFi
 VALUES ('Ana', 'Santos', 'ana.santos@email.com', '222.333.444-55', '2223334', '555-5555', '555-5555', 'Rua D', 'Brasília', 'DF', '22222-333');
 
 
-select * from tbClientes
-
-
-
 INSERT INTO tbFornec (nome, email, CNPJ, telefone, endereco, cidade, estado, situacao)
 VALUES
 ('Fornecedor A', 'fornecedorA@email.com', '12345678901234', '123-456-7890', 'Rua A, 123', 'Cidade A', 'Estado A', 'Ativo'),
@@ -94,13 +88,6 @@ VALUES
 ('Fornecedor I', 'fornecedorI@email.com', '90123456789012', '901-234-5678', 'Rua I, 666', 'Cidade I', 'Estado I', 'Ativo'),
 ('Fornecedor J', 'fornecedorJ@email.com', '01234567890123', '012-345-6789', 'Rua J, 777', 'Cidade J', 'Estado J', 'Ativo');
 
-INSERT INTO tbFornec (nome, email, CNPJ, telefone, endereco, cidade, estado, situacao)
-VALUES
-('a', 'a', '12', '12', 'Rua A, 123', 'Cidade A', 'Estado A', 'Ativo')
-
-SELECT * FROM tbFornec
-
-
 
 insert into tbCateg (descricao)
 values
@@ -112,96 +99,3 @@ values
 ('COMÉDIA'),
 ('DRAMA'),
 ('ROMANCE');
-
-SELECT * FROM tbCateg
-
-SELECT * FROM tbClientes
-
-INSERT INTO tbClientes
-                (nome,
-                sobrenome,
-                email,
-                cpf,
-                rg,
-                telefoneCel,
-                telefoneFixo,
-                endereco,
-                cidade,
-                estado,
-                cep,
-                foto)
-                VALUES
-                ('{txtNome.Text}',
-                '{txtSobrenome.Text}',
-                '{txtEmail.Text}',
-                '{txtCPF.Text}',
-                '{txtRG.Text}',
-                '{txtCelular.Text}',
-                '{txtFixo.Text}',
-                '{txtEndereco.Text}',
-                '{txtCidade.Text}',
-                '{diretorio}')
-
-
-				INSERT INTO tbClientes
-                (nome,
-                sobrenome,
-                email,
-                cpf,
-                rg,
-                telefoneCel,
-                telefoneFixo,
-                endereco,
-                cidade,
-                estado,
-                cep,
-                foto)
-                VALUES
-                ('{txtNome.Text}',
-                '{txtSobrenome.Text}',
-                '{txtEmail.Text}',
-                '{txtCPF.Text}',
-                '{txtRG.Text}',
-                '{111111111}',
-                '{111111111}',
-                '{txtEndereco.Text}',
-                '{txtCidade.Text}',
-                '{txtEstado.Text}',
-                '{txt}',
-                '{diretorio}')
-
-
-
-delete from tbClientes where id = 1006
-
-select * from tbClientes
-
-delete from tbClientes where ID = 1002
-
-INSERT INTO tbClientes
-                (nome,
-                sobrenome,
-                email,
-                cpf,
-                rg,
-                telefoneCel,
-                telefoneFixo,
-                endereco,
-                cidade,
-                estado,
-                cep,
-                foto)
-                VALUES
-                ('{txtNome.Text}',
-                '{txtSobrenome.Text}',
-                '{txtEmail.Text}',
-                '{maskCPF.Text}',
-                '{maskRG.Text}',
-                '{maskCel.Text}',
-                '{maskFixo.Text}',
-                '{txtEndereco.Text}',
-                '{txtCidade.Text}',
-                '{txtEstado.Text}',
-                '{txtCEP.Text}',
-                '{diretorio}')
-                
