@@ -295,13 +295,13 @@ Partial Class cadFornec
         Label10.AutoSize = True
         Label10.Location = New Point(12, 249)
         Label10.Name = "Label10"
-        Label10.Size = New Size(102, 15)
+        Label10.Size = New Size(145, 15)
         Label10.TabIndex = 38
-        Label10.Text = "PESQUISAR FILME"
+        Label10.Text = "PESQUISAR FORNECEDOR"
         ' 
         ' txtPesq
         ' 
-        txtPesq.Location = New Point(120, 244)
+        txtPesq.Location = New Point(164, 246)
         txtPesq.Name = "txtPesq"
         txtPesq.Size = New Size(178, 23)
         txtPesq.TabIndex = 13

@@ -1,4 +1,8 @@
-﻿Public Class pesqCli
+﻿Imports System.ComponentModel
+
+Public Class pesqCli
+
+
     Private Sub pesqCli_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PopularDgvClientes()
     End Sub
@@ -39,7 +43,7 @@
                     txtCidade.Text = rs.Fields(9).Value
                     txtEstado.Text = rs.Fields(10).Value
                     mkCEP.Text = rs.Fields(11).Value
-                    foto.Load(rs.Fields(13).Value)
+                    foto.Load(rs.Fields(12).Value)
                     diretorio = rs.Fields(13).Value
 
                 End If
@@ -135,5 +139,9 @@
 
         End Try
 
+    End Sub
+
+    Private Sub pesqCli_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        LimparTudo()
     End Sub
 End Class

@@ -61,3 +61,4 @@ C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Deb
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.genruntimeconfig.cache
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\ref\LocadoraFilmeStar.dll
 C:\Users\Fernando B. Leonelli\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadFilme.resources
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\ProjetoP1\LocadoraFilmeStar\obj\Debug\net6.0-windows\LocadoraFilmeStar.cadFilme.resources

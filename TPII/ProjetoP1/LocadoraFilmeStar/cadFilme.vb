@@ -136,7 +136,7 @@ Public Class cadFilme
     End Sub
 
     Private Sub PopularCbs()
-        Dim con As New SqlConnection("Server = DESKTOP-J8VD9D7; Database = filmestar;Integrated Security = true;")
+        Dim con As New SqlConnection("Server = LAB5-12; Database = filmestar;Integrated Security = true;")
         Dim queryFornec As New SqlCommand("select * from tbFornec where situacao = 'ATIVO'", con)
         Dim queryCateg As New SqlCommand("select * from tbCateg", con)
 

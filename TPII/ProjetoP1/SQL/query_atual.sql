@@ -1,3 +1,6 @@
+create database filmeStar
+
+
 CREATE TABLE tbClientes (
     ID INT PRIMARY KEY IDENTITY(1,1),
     nome VARCHAR(150) NOT NULL,
@@ -18,6 +21,8 @@ CREATE TABLE tbClientes (
 
 select * from tbClientes
 
+SELECT * FROM tbFilmes
+
 CREATE TABLE tbFornec (
 	ID INT PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(150) NOT NULL,
@@ -26,9 +31,14 @@ CREATE TABLE tbFornec (
 	telefone VARCHAR(14) NOT NULL,
 	endereco VARCHAR(255) NOT NULL,
     cidade VARCHAR(100) NOT NULL,
-    estado VARCHAR(50) NOT NULL,
+    estado VARCHAR(50) NOT NULL,    
 	situacao VARCHAR (20) NOT NULL
 );
+
+drop TABLE tbFilmes
+
+ALTER TABLE
+
 
 create table tbCateg(
 ID int primary key identity(1,1),
