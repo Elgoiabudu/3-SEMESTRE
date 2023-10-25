@@ -7,3 +7,4 @@ C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\Segunda Parte do Semestre\PrimeiroP
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\Segunda Parte do Semestre\PrimeiroProjetoC#\obj\Debug\PrimeiroProjetoC#.csproj.CoreCompileInputs.cache
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\Segunda Parte do Semestre\PrimeiroProjetoC#\obj\Debug\PrimeiroProjetoC#.exe
 C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\Segunda Parte do Semestre\PrimeiroProjetoC#\obj\Debug\PrimeiroProjetoC#.pdb
+C:\Users\lab5.LABTEC\Desktop\3-SEMESTRE\TPII\Segunda Parte do Semestre\PrimeiroProjetoC#\obj\Debug\PrimeiroProjetoC_.Form1.resources
