@@ -49,6 +49,7 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtCEP = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,8 +58,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtCEP = new System.Windows.Forms.TextBox();
             this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +81,7 @@
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(14, 63);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(126, 32);
             this.txtID.TabIndex = 1;
@@ -91,7 +92,7 @@
             this.txtDataCad.Enabled = false;
             this.txtDataCad.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDataCad.Location = new System.Drawing.Point(152, 63);
-            this.txtDataCad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDataCad.Margin = new System.Windows.Forms.Padding(4);
             this.txtDataCad.MaxLength = 10;
             this.txtDataCad.Name = "txtDataCad";
             this.txtDataCad.Size = new System.Drawing.Size(328, 32);
@@ -113,7 +114,7 @@
             this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(689, 63);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(669, 32);
             this.txtNome.TabIndex = 4;
@@ -144,7 +145,7 @@
             // 
             this.txtCPF.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(493, 63);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPF.Mask = "999,999,999-99";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(188, 32);
@@ -156,7 +157,7 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(15, 136);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Mask = "(99) 9999 9999";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(173, 32);
@@ -178,7 +179,7 @@
             // 
             this.txtCelular.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelular.Location = new System.Drawing.Point(196, 136);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtCelular.Mask = "(99) 99999 9999";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(166, 32);
@@ -200,7 +201,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(370, 136);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(988, 32);
             this.txtEmail.TabIndex = 7;
@@ -234,9 +235,9 @@
             this.groupBox1.Controls.Add(this.txtCPF);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 91);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1373, 194);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
@@ -258,9 +259,9 @@
             this.groupBox2.Controls.Add(this.txtCidade);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(13, 293);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1373, 176);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
@@ -282,7 +283,7 @@
             this.txtNumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNumero.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(15, 122);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(190, 32);
             this.txtNumero.TabIndex = 11;
@@ -304,10 +305,21 @@
             this.txtEstado.Enabled = false;
             this.txtEstado.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.Location = new System.Drawing.Point(856, 122);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(502, 32);
             this.txtEstado.TabIndex = 13;
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEP.Location = new System.Drawing.Point(14, 50);
+            this.txtCEP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCEP.MaxLength = 8;
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(191, 32);
+            this.txtCEP.TabIndex = 8;
+            this.txtCEP.Leave += new System.EventHandler(this.txtCEP_Leave);
             // 
             // label9
             // 
@@ -326,7 +338,7 @@
             this.txtLogradouro.Enabled = false;
             this.txtLogradouro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogradouro.Location = new System.Drawing.Point(213, 50);
-            this.txtLogradouro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLogradouro.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(635, 32);
             this.txtLogradouro.TabIndex = 9;
@@ -360,7 +372,7 @@
             this.txtBairro.Enabled = false;
             this.txtBairro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.Location = new System.Drawing.Point(856, 50);
-            this.txtBairro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBairro.Margin = new System.Windows.Forms.Padding(4);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(502, 32);
             this.txtBairro.TabIndex = 10;
@@ -382,7 +394,7 @@
             this.txtCidade.Enabled = false;
             this.txtCidade.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(213, 122);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(635, 32);
             this.txtCidade.TabIndex = 12;
@@ -391,7 +403,7 @@
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Location = new System.Drawing.Point(13, 13);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(217, 70);
             this.btnSalvar.TabIndex = 16;
@@ -399,22 +411,11 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtCEP
-            // 
-            this.txtCEP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEP.Location = new System.Drawing.Point(14, 50);
-            this.txtCEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCEP.MaxLength = 8;
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(191, 32);
-            this.txtCEP.TabIndex = 8;
-            this.txtCEP.Leave += new System.EventHandler(this.txtCEP_Leave);
-            // 
             // btnDeletar
             // 
             this.btnDeletar.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.Location = new System.Drawing.Point(250, 13);
-            this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeletar.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(217, 70);
             this.btnDeletar.TabIndex = 19;
@@ -422,18 +423,31 @@
             this.btnDeletar.UseVisualStyleBackColor = true;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(496, 13);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(217, 70);
+            this.btnLimpar.TabIndex = 20;
+            this.btnLimpar.Text = "LIMPAR";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 482);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Clientes";
@@ -480,5 +494,6 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

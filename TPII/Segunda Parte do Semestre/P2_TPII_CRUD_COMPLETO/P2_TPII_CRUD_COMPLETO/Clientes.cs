@@ -11,11 +11,33 @@ using System.Data.SqlClient;
 
 namespace P2_TPII_CRUD_COMPLETO
 {
+
+
     public partial class Clientes : Form
     {
         SqlConnection conexao;
         SqlCommand comando;
         string SQL, IDGlobal;
+
+
+        public bool VerificarCampos()
+        {
+            if (txtCPF.Text == "" ||
+                txtNome.Text == "" ||
+                txtTelefone.Text == "" ||
+                txtCelular.Text == "" ||
+                txtEmail.Text == "" ||
+                txtCEP.Text == "" ||
+                txtLogradouro.Text == "" ||
+                txtBairro.Text == "" ||
+                txtNumero.Text == "" ||
+                txtCidade.Text == "" ||
+                txtEstado.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
 
         public Clientes()
         {
@@ -50,18 +72,7 @@ namespace P2_TPII_CRUD_COMPLETO
             {
                 if (btnSalvar.Text == "SALVAR")
                 {
-                    if (txtCPF.Text == "" ||
-                        txtNome.Text == "" ||
-                        txtTelefone.Text == "" ||
-                        txtCelular.Text == "" ||
-                        txtEmail.Text == "" ||
-                        txtCEP.Text == "" ||
-                        txtLogradouro.Text == "" ||
-                        txtBairro.Text == "" ||
-                        txtNumero.Text == "" ||
-                        txtCidade.Text == "" ||
-                        txtEstado.Text == ""
-                        )
+                    if (!VerificarCampos())
                     {
                         MessageBox.Show("Preencha todos os campos corretamente!", "ERRO",
                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -92,28 +103,36 @@ namespace P2_TPII_CRUD_COMPLETO
                 }
                 else
                 {
+                    if (VerificarCampos())
+                    {
+                        SQL = "UPDATE Clientes " +
+                            "SET " +
+                            $"cpf = '{txtCPF.Text}'," +
+                            $"NOME = '{txtNome.Text}'," +
+                            $"telefone = '{txtTelefone.Text}'," +
+                            $"celular = '{txtCelular.Text}'," +
+                            $"email = '{txtEmail.Text}'," +
+                            $"CEP = '{txtCEP.Text}'," +
+                            $"logradouro = '{txtLogradouro.Text}'," +
+                            $"bairro = '{txtBairro.Text}'," +
+                            $"cidade = '{txtCidade.Text}'," +
+                            $"numero = '{txtNumero.Text}'," +
+                            $"estado = '{txtEstado.Text}'" +
+                            $"WHERE ID = {IDGlobal}";
 
-                    SQL = "UPDATE Clientes " +
-                        "SET " +
-                        $"cpf = '{txtCPF.Text}'," +
-                        $"NOME = '{txtNome.Text}'," +
-                        $"telefone = '{txtTelefone.Text}'," +
-                        $"celular = '{txtCelular.Text}'," +
-                        $"email = '{txtEmail.Text}'," +
-                        $"CEP = '{txtCEP.Text}'," +
-                        $"logradouro = '{txtLogradouro.Text}'," +
-                        $"bairro = '{txtBairro.Text}'," +
-                        $"cidade = '{txtCidade.Text}'," +
-                        $"numero = '{txtNumero.Text}'," +
-                        $"estado = '{txtEstado.Text}'" +
-                        $"WHERE ID = {IDGlobal}";
+                        comando = new SqlCommand(SQL, conexao);
+                        comando.ExecuteNonQuery();
+                        MessageBox.Show("Dados Atualizados Com Sucesso!", "SUCESSO",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnSalvar.Text = "SALVAR";
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha todos os campos corretamente!", "ERRO",
+                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
-                    comando = new SqlCommand(SQL, conexao);
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("Dados Atualizados Com Sucesso!", "SUCESSO",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btnSalvar.Text = "SALVAR";
-                    LimparCampos();
                 }
             }
             catch (Exception ex)
@@ -171,7 +190,7 @@ namespace P2_TPII_CRUD_COMPLETO
         {
             if (IDGlobal == "")
             {
-                MessageBox.Show("Nenhum Registro Selecionado.", this.Text, MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Nenhum Registro Selecionado.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -189,6 +208,12 @@ namespace P2_TPII_CRUD_COMPLETO
                     txtCPF.Focus();
                 }
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+            txtCPF.Focus();
         }
 
         private void txtCPF_Leave(object sender, EventArgs e)
