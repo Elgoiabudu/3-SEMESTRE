@@ -44,7 +44,7 @@
             this.cADASTRODECLIENTESToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1434, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1434, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -53,15 +53,16 @@
             // 
             this.cADASTRODECLIENTESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cLIENTESToolStripMenuItem});
+            this.cADASTRODECLIENTESToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cADASTRODECLIENTESToolStripMenuItem.Name = "cADASTRODECLIENTESToolStripMenuItem";
-            this.cADASTRODECLIENTESToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.cADASTRODECLIENTESToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
             this.cADASTRODECLIENTESToolStripMenuItem.Text = "&CADASTRO";
             // 
             // cLIENTESToolStripMenuItem
             // 
             this.cLIENTESToolStripMenuItem.Name = "cLIENTESToolStripMenuItem";
             this.cLIENTESToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.cLIENTESToolStripMenuItem.Text = "CLIENTES";
             this.cLIENTESToolStripMenuItem.Click += new System.EventHandler(this.cLIENTESToolStripMenuItem_Click);
             // 
@@ -69,7 +70,7 @@
             // 
             this.lblConex.AutoSize = true;
             this.lblConex.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConex.Location = new System.Drawing.Point(1380, -11);
+            this.lblConex.Location = new System.Drawing.Point(1377, 34);
             this.lblConex.Name = "lblConex";
             this.lblConex.Size = new System.Drawing.Size(57, 54);
             this.lblConex.TabIndex = 2;
@@ -79,16 +80,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1263, 9);
+            this.label1.Location = new System.Drawing.Point(1129, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 24);
+            this.label1.Size = new System.Drawing.Size(235, 24);
             this.label1.TabIndex = 3;
-            this.label1.Text = "CONEXÃO:";
+            this.label1.Text = "STATUS DA CONEXÃO:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1434, 705);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblConex);
