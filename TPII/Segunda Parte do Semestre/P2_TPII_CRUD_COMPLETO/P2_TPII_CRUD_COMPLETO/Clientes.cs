@@ -19,6 +19,12 @@ namespace P2_TPII_CRUD_COMPLETO
         SqlCommand comando;
         string SQL, IDGlobal;
 
+        public void popularDGV()
+        {
+            DataTable dt = new DataTable();
+
+        }
+
 
         public bool VerificarCampos()
         {
@@ -99,6 +105,7 @@ namespace P2_TPII_CRUD_COMPLETO
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimparCampos();
                         txtCPF.Focus();
+                        IDGlobal = "";
                     }
                 }
                 else
@@ -126,6 +133,7 @@ namespace P2_TPII_CRUD_COMPLETO
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnSalvar.Text = "SALVAR";
                         LimparCampos();
+                        IDGlobal = "";
                     }
                     else
                     {
@@ -159,7 +167,7 @@ namespace P2_TPII_CRUD_COMPLETO
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message+"ERRO NO CEP", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtCEP.Clear();
                         txtLogradouro.Clear();
                         txtBairro.Clear();
@@ -180,7 +188,7 @@ namespace P2_TPII_CRUD_COMPLETO
         {
             IDGlobal = "";
 
-            conexao = new SqlConnection(@"Server=NITRO-PC\SQLEXPRESS;
+            conexao = new SqlConnection(@"Server=LAB5-13;
                                         Database=P2_TP2;
                                         trusted_connection=yes");
             conexao.Open();
@@ -214,6 +222,11 @@ namespace P2_TPII_CRUD_COMPLETO
         {
             LimparCampos();
             txtCPF.Focus();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void txtCPF_Leave(object sender, EventArgs e)
@@ -265,7 +278,7 @@ namespace P2_TPII_CRUD_COMPLETO
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message+"ERRO NO LEAVE", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
 
