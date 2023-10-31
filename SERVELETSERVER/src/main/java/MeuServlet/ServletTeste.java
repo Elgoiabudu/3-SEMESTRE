@@ -30,13 +30,16 @@ public class ServletTeste extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter saida = response.getWriter();
 		
-		String celsius = request.getParameter("celsius");
+		Double celsius = Double.parseDouble(request.getParameter("celsius"));
+		
+		Double fahrenheit = celsius * 1.8 + 32;
 		
 		
 		saida.println(
-				"<html>"
+				"<html lang=\"pt=br\">"
+				+ "<meta charset=\"UTF-8\">"
 				+ "<body>"
-				+ "<h1>"+ celsius +"</h1>"
+				+ "<h1> Este é o resultado em Fahrenheit: "+ fahrenheit +"</h1>"
 				+ "</body>"
 				+ "</html>"				
 				);
