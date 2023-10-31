@@ -29,10 +29,14 @@ public class ServletTeste extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter saida = response.getWriter();
+		
+		String celsius = request.getParameter("celsius");
+		
+		
 		saida.println(
 				"<html>"
 				+ "<body>"
-				+ "<h1>Mussarelo</h1>"
+				+ "<h1>"+ celsius +"</h1>"
 				+ "</body>"
 				+ "</html>"				
 				);
