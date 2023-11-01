@@ -21,7 +21,24 @@ namespace P2_TPII_CRUD_COMPLETO
 
         public void popularDGV()
         {
-            DataTable dt = new DataTable();
+            try
+            {
+                SQL = "SELECT cpf as CPF, nome as NOME, celular as CELULAR, telefone as TELEFONE from Clientes";
+
+                using (SqlDataAdapter da = new SqlDataAdapter(SQL, conexao))
+                {
+                    using (DataTable dt = new DataTable())
+                    {
+                        da.Fill(dt);
+                        dgvClientes.DataSource = dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
 
         }
 
@@ -70,6 +87,7 @@ namespace P2_TPII_CRUD_COMPLETO
             txtNumero.Clear();
             txtCidade.Clear();
             txtEstado.Clear();
+            btnSalvar.Text = "SALVAR";
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -106,6 +124,7 @@ namespace P2_TPII_CRUD_COMPLETO
                         LimparCampos();
                         txtCPF.Focus();
                         IDGlobal = "";
+                        popularDGV();
                     }
                 }
                 else
@@ -134,6 +153,7 @@ namespace P2_TPII_CRUD_COMPLETO
                         btnSalvar.Text = "SALVAR";
                         LimparCampos();
                         IDGlobal = "";
+                        popularDGV();
                     }
                     else
                     {
@@ -167,7 +187,7 @@ namespace P2_TPII_CRUD_COMPLETO
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message+"ERRO NO CEP", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message + "ERRO NO CEP", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtCEP.Clear();
                         txtLogradouro.Clear();
                         txtBairro.Clear();
@@ -192,6 +212,8 @@ namespace P2_TPII_CRUD_COMPLETO
                                         Database=P2_TP2;
                                         trusted_connection=yes");
             conexao.Open();
+
+            popularDGV();
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -214,6 +236,7 @@ namespace P2_TPII_CRUD_COMPLETO
                     btnSalvar.Text = "SALVAR";
                     IDGlobal = "";
                     txtCPF.Focus();
+                    popularDGV();
                 }
             }
         }
@@ -222,11 +245,49 @@ namespace P2_TPII_CRUD_COMPLETO
         {
             LimparCampos();
             txtCPF.Focus();
+            IDGlobal = "";
         }
 
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = dgvClientes.Rows[e.RowIndex].Cells[0].Value;
+
+            SQL = $"SELECT * FROM Clientes WHERE cpf = '{id}'";
+
+            using (SqlCommand cmd = new SqlCommand(SQL, conexao))
+            {
+                using (SqlDataReader leitor = cmd.ExecuteReader())
+                {
+                    while (leitor.Read())
+                    {
+                        btnSalvar.Text = "ATUALIZAR";
+                        IDGlobal = leitor["ID"].ToString();
+                        txtCPF.Text = leitor["cpf"].ToString();
+                        txtID.Text = leitor["ID"].ToString();
+                        txtDataCad.Text = leitor["dataCadastro"].ToString();
+                        txtNome.Text = leitor["nome"].ToString();
+                        txtTelefone.Text = leitor["telefone"].ToString();
+                        txtCelular.Text = leitor["celular"].ToString();
+                        txtEmail.Text = leitor["email"].ToString();
+                        txtCEP.Text = leitor["CEP"].ToString();
+                        txtLogradouro.Text = leitor["logradouro"].ToString();
+                        txtBairro.Text = leitor["bairro"].ToString();
+                        txtNumero.Text = leitor["numero"].ToString();
+                        txtCidade.Text = leitor["cidade"].ToString();
+                        txtEstado.Text = leitor["estado"].ToString();
+                    }
+                }
+            }
         }
 
         private void txtCPF_Leave(object sender, EventArgs e)
@@ -278,7 +339,7 @@ namespace P2_TPII_CRUD_COMPLETO
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message+"ERRO NO LEAVE", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message + "ERRO NO LEAVE", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
 

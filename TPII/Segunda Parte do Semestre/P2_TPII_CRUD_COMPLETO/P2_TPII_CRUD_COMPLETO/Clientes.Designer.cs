@@ -60,14 +60,9 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPesq = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CELULAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ACOES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -444,16 +439,16 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // textBox1
+            // txtPesq
             // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(189, 354);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(672, 27);
-            this.textBox1.TabIndex = 14;
+            this.txtPesq.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPesq.Enabled = false;
+            this.txtPesq.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesq.Location = new System.Drawing.Point(189, 354);
+            this.txtPesq.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPesq.Name = "txtPesq";
+            this.txtPesq.Size = new System.Drawing.Size(672, 27);
+            this.txtPesq.TabIndex = 14;
             // 
             // label14
             // 
@@ -473,47 +468,13 @@
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cpf,
-            this.NOME,
-            this.CELULAR,
-            this.TELEFONE,
-            this.ACOES});
             this.dgvClientes.Location = new System.Drawing.Point(13, 388);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.Size = new System.Drawing.Size(1373, 362);
             this.dgvClientes.TabIndex = 21;
-            // 
-            // cpf
-            // 
-            this.cpf.HeaderText = "CPF";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
-            // 
-            // NOME
-            // 
-            this.NOME.HeaderText = "NOME";
-            this.NOME.Name = "NOME";
-            this.NOME.ReadOnly = true;
-            // 
-            // CELULAR
-            // 
-            this.CELULAR.HeaderText = "CELULAR";
-            this.CELULAR.Name = "CELULAR";
-            this.CELULAR.ReadOnly = true;
-            // 
-            // TELEFONE
-            // 
-            this.TELEFONE.HeaderText = "TELEFONE";
-            this.TELEFONE.Name = "TELEFONE";
-            this.TELEFONE.ReadOnly = true;
-            // 
-            // ACOES
-            // 
-            this.ACOES.HeaderText = "AÇÕES";
-            this.ACOES.Name = "ACOES";
-            this.ACOES.ReadOnly = true;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // Clientes
             // 
@@ -521,7 +482,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 762);
             this.Controls.Add(this.dgvClientes);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPesq);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btnDeletar);
@@ -580,13 +541,8 @@
         private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPesq;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CELULAR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ACOES;
     }
 }
