@@ -19,20 +19,37 @@ namespace P2_TPII_CRUD_COMPLETO
         SqlCommand comando;
         string SQL, IDGlobal;
 
-        public void popularDGV()
+        public void popularDGV(string param)
         {
             try
             {
-                SQL = "SELECT cpf as CPF, nome as NOME, celular as CELULAR, telefone as TELEFONE from Clientes";
-
-                using (SqlDataAdapter da = new SqlDataAdapter(SQL, conexao))
+                if (param == "")
                 {
-                    using (DataTable dt = new DataTable())
+                    SQL = "SELECT cpf as CPF, nome as NOME, celular as CELULAR, telefone as TELEFONE from Clientes";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(SQL, conexao))
                     {
-                        da.Fill(dt);
-                        dgvClientes.DataSource = dt;
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dgvClientes.DataSource = dt;
+                        }
                     }
                 }
+                else
+                {
+                    SQL = $"SELECT cpf as CPF, nome as NOME, celular as CELULAR, telefone as TELEFONE from Clientes WHERE nome like '{param}%' ";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(SQL, conexao))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dgvClientes.DataSource = dt;
+                        }
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -124,7 +141,7 @@ namespace P2_TPII_CRUD_COMPLETO
                         LimparCampos();
                         txtCPF.Focus();
                         IDGlobal = "";
-                        popularDGV();
+                        popularDGV("");
                     }
                 }
                 else
@@ -153,7 +170,7 @@ namespace P2_TPII_CRUD_COMPLETO
                         btnSalvar.Text = "SALVAR";
                         LimparCampos();
                         IDGlobal = "";
-                        popularDGV();
+                        popularDGV("");
                     }
                     else
                     {
@@ -208,12 +225,12 @@ namespace P2_TPII_CRUD_COMPLETO
         {
             IDGlobal = "";
 
-            conexao = new SqlConnection(@"Server=LAB5-13;
+            conexao = new SqlConnection(@"Server=NITRO-PC\SQLEXPRESS;
                                         Database=P2_TP2;
                                         trusted_connection=yes");
             conexao.Open();
 
-            popularDGV();
+            popularDGV("");
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -236,7 +253,7 @@ namespace P2_TPII_CRUD_COMPLETO
                     btnSalvar.Text = "SALVAR";
                     IDGlobal = "";
                     txtCPF.Focus();
-                    popularDGV();
+                    popularDGV("");
                 }
             }
         }
@@ -255,7 +272,7 @@ namespace P2_TPII_CRUD_COMPLETO
 
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -288,6 +305,11 @@ namespace P2_TPII_CRUD_COMPLETO
                     }
                 }
             }
+        }
+
+        private void txtPesq_TextChanged(object sender, EventArgs e)
+        {
+            popularDGV(txtPesq.Text);
         }
 
         private void txtCPF_Leave(object sender, EventArgs e)

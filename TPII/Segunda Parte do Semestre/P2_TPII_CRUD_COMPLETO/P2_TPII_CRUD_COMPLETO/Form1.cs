@@ -24,7 +24,7 @@ namespace P2_TPII_CRUD_COMPLETO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            conexao = new SqlConnection(@"Server=LAB5-13;
+            conexao = new SqlConnection(@"Server=NITRO-PC\SQLEXPRESS;
                                         Database=P2_TP2;
                                         trusted_connection=yes");
 
